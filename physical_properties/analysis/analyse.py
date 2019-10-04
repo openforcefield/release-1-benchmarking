@@ -695,23 +695,6 @@ def plot_per_smirks_statistic(properties_by_type, statistics_type, smirnoff_resu
                        bbox_inches='tight')
 
 
-def print_per_property_statistic(results_paths, statistics_type, properties_by_type):
-    header_string = f'Property Type'
-
-    for results_path in results_paths:
-        header_string = ','.join([header_string, results_path, f'{results_path} {str(statistics_type.value)}'])
-
-    print(header_string)
-
-    for property_type in properties_by_type:
-
-        row_string = f'{property_type}'
-
-        for results_path in results_paths:
-            means, errors, _ = compute_bootstrapped_statistics(properties_by_type[property_type][results_path])
-            row_string = ','.join([row_string, f'{means[statistics_type]:.6e}', f'{errors[statistics_type]:.6e}'])
-
-
 def main():
 
     # Load the original data set.
