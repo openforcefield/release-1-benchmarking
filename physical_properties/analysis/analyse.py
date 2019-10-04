@@ -2,13 +2,15 @@ import json
 import os
 import re
 import sys
+from enum import Enum
 from io import StringIO
 from collections import defaultdict
+from typing import Tuple, Dict
 
 import numpy as np
 
 import matplotlib
-from matplotlib import gridspec, pyplot
+from matplotlib import pyplot
 from openforcefield.topology import Molecule, Topology
 from openforcefield.typing.engines.smirnoff import ForceField
 from openforcefield.utils import UndefinedStereochemistryError
@@ -16,42 +18,73 @@ from openforcefield.utils import UndefinedStereochemistryError
 from propertyestimator import unit
 from propertyestimator.utils.serialization import TypedJSONDecoder
 
+
 preferred_units = {
-    'Density': unit.kilogram / unit.meter**3,
+    'Density': unit.kilogram / unit.meter ** 3,
     'DielectricConstant': unit.dimensionless,
     'EnthalpyOfVaporization': unit.kilojoule / unit.mole,
     'EnthalpyOfMixing': unit.kilojoule / unit.mole,
-    'ExcessMolarVolume': unit.meter**3 / unit.mole
+    'ExcessMolarVolume': unit.centimeter ** 3 / unit.mole
 }
 
 
 axis_bounds = {
-    'Density': (500.0, 3000.0),
+    'Density': (500.0, 3500.0),
     'DielectricConstant': (0.0, 50.0),
-    'EnthalpyOfVaporization': (30, 90.0),
-    'EnthalpyOfMixing': (-4.0, 3.0),
-    'ExcessMolarVolume': (-1.0e-6, 1.0e-6)
+    'EnthalpyOfVaporization': (20, 100.0),
+    'EnthalpyOfMixing': (-4.0, 4.0),
+    'ExcessMolarVolume': (-1.0, 1.0)
 }
+
+
+optimised_vdw_smirks = [
+    '[#1:1]-[#6X4]',
+    '[#1:1]-[#6X4]-[#7,#8,#9,#16,#17,#35]',
+    '[#1:1]-[#6X3]',
+    '[#1:1]-[#6X3]~[#7,#8,#9,#16,#17,#35]',
+    '[#1:1]-[#8]',
+    '[#6:1]',
+    '[#6X4:1]',
+    '[#8:1]',
+    '[#8X2H0+0:1]',
+    '[#8X2H1+0:1]',
+    '[#7:1]',
+    '[#16:1]',
+    '[#9:1]',
+    '[#17:1]',
+    '[#35:1]'
+]
+
+
+class Statistics(Enum):
+    Slope = 'Slope'
+    Intercept = 'Intercept'
+    R = 'R'
+    R2 = 'R^2'
+    P = 'p'
+    RMSE = 'RMSE'
+    MSE = 'MSE'
+    MUE = 'MUE'
+    Tau = 'Tau'
 
 
 cached_smirks_parameters = {}
 
-
 matplotlib.rcParams['axes.prop_cycle'] = matplotlib.cycler(color=['b', 'r', 'g', 'k', 'c'])
 
 
-def load_results(base_name, measured_data_set, save_tracebacks=False):
+def load_results(base_name, measured_data_set):
 
     # Load the results
-    with open(f'{base_name}.json', 'r') as file:
-        json_results = json.load(file, cls=TypedJSONDecoder)
+    with open(os.path.join('raw_data', f'{base_name}.json'), 'r') as file:
+        estimated_data_set = json.load(file, cls=TypedJSONDecoder)
 
     properties_by_type = defaultdict(list)
 
-    for substance_id in json_results.properties:
+    for substance_id in estimated_data_set.properties:
 
         measured_properties = measured_data_set.properties[substance_id]
-        estimated_properties = json_results.properties[substance_id]
+        estimated_properties = estimated_data_set.properties[substance_id]
 
         for estimated_property in estimated_properties:
             property_type = estimated_property.__class__.__name__
@@ -59,41 +92,155 @@ def load_results(base_name, measured_data_set, save_tracebacks=False):
             measured_property = next(x for x in measured_properties if x.id == estimated_property.id)
             properties_by_type[property_type].append((measured_property, estimated_property))
 
-    if save_tracebacks:
-
-        for index, exception in enumerate(json_results.exceptions):
-
-            with open(f'{base_name}_error_{index}.txt', 'w') as file:
-                file.write(f'{exception.directory}\n')
-                file.write(exception.message.replace('\\n', '\n'))
-
     return properties_by_type
 
 
-def compute_mse(property_tuples):
+def compute_statistic_unit(base_unit, statistics_type):
+    if statistics_type == Statistics.Slope:
+        return None
+    elif statistics_type == Statistics.Intercept:
+        return base_unit
+    elif statistics_type == Statistics.R:
+        return None
+    elif statistics_type == Statistics.R2:
+        return None
+    elif statistics_type == Statistics.P:
+        return None
+    elif statistics_type == Statistics.RMSE:
+        return base_unit
+    elif statistics_type == Statistics.MSE:
+        return base_unit
+    elif statistics_type == Statistics.MUE:
+        return base_unit
+    elif statistics_type == Statistics.Tau:
+        return None
 
-    average_mse = 0.0
-    mse_standard_deviation = 0.0
 
-    for measured_property, estimated_property in property_tuples:
+def compute_statistics(measured_values, estimated_values):
+    """Calculates a collection of common statistics comporaring the measured
+    and estimated values.
 
-        error = (estimated_property.value -
-                 measured_property.value).to(preferred_units[type(measured_property).__name__]).magnitude
+    Parameters
+    ----------
+    measured_values: numpy.ndarray
+        The experimentally measured values with shape=(number of data points)
+    estimated_values: numpy.ndarray
+        The computationally estimated values with shape=(number of data points)
 
-        average_mse += error ** 2
+    Returns
+    -------
+    numpy.ndarray
+        An array of the summarised statistics, containing the
+        Slope, Intercept, R, R^2, p, RMSE, MSE, MUE, Tau
+    list of str
+        Human readable labels for each of the statistics.
+    """
+    import scipy.stats
 
-    average_mse /= len(property_tuples)
+    statistics_labels = [
+        Statistics.Slope,
+        Statistics.Intercept,
+        Statistics.R,
+        Statistics.R2,
+        Statistics.P,
+        Statistics.RMSE,
+        Statistics.MSE,
+        Statistics.MUE,
+        Statistics.Tau
+    ]
 
-    for measured_property, estimated_property in property_tuples:
+    summary_statistics = np.zeros(len(statistics_labels))
 
-        error = (estimated_property.value -
-                 measured_property.value).to(preferred_units[type(measured_property).__name__]).magnitude
+    (
+        summary_statistics[0],
+        summary_statistics[1],
+        summary_statistics[2],
+        summary_statistics[4],
+        _
+    ) = scipy.stats.linregress(measured_values, estimated_values)
 
-        mse_standard_deviation += (average_mse - error ** 2) ** 2
+    summary_statistics[3] = summary_statistics[2] ** 2
+    summary_statistics[5] = np.sqrt(np.mean((estimated_values - measured_values) ** 2))
+    summary_statistics[6] = np.mean(estimated_values - measured_values)
+    summary_statistics[7] = np.mean(np.absolute(estimated_values - measured_values))
+    summary_statistics[8], _ = scipy.stats.kendalltau(measured_values, estimated_values)
 
-    mse_standard_deviation = np.sqrt(mse_standard_deviation / len(property_tuples))
+    return summary_statistics, statistics_labels
 
-    return average_mse, mse_standard_deviation
+
+def compute_bootstrapped_statistics(property_tuples, percentile=0.95, bootstrap_samples=1000):
+    """Compute the bootstrapped mean and confidence interval for a set
+    of common error statistics.
+
+    Notes
+    -----
+    Bootstrapped samples are generated with replacement from the full
+    original data set.
+    """
+
+    sample_count = len(property_tuples)
+
+    measured_values = np.zeros(sample_count)
+    estimated_values = np.zeros(sample_count)
+
+    property_types = set()
+
+    for index, (measured_property, estimated_property) in enumerate(property_tuples):
+        property_type = type(measured_property).__name__
+        property_types.add(property_type)
+
+        units = preferred_units[property_type]
+
+        measured_values[index] = measured_property.value.to(units).magnitude
+        estimated_values[index] = estimated_property.value.to(units).magnitude
+
+    if len(property_types) != 1:
+        raise ValueError(f'The tuples must only contain a single type of property '
+                         f'(the provided contains {" ".join(property_types)}).')
+
+    # Compute the mean of the statistics.
+    mean_statistics, statistics_labels = compute_statistics(measured_values, estimated_values)
+
+    # Generate the bootstrapped statistics samples.
+    sample_statistics = np.zeros((bootstrap_samples, len(mean_statistics)))
+
+    for sample_index in range(bootstrap_samples):
+        samples_indices = np.random.randint(low=0, high=sample_count, size=sample_count)
+
+        sample_measured_values = measured_values[samples_indices]
+        sample_estimated_values = estimated_values[samples_indices]
+
+        sample_statistics[sample_index], _ = compute_statistics(sample_measured_values,
+                                                                sample_estimated_values)
+
+    # Compute the SEM
+    standard_errors_array = np.std(sample_statistics, axis=0)
+
+    # Store the means and SEMs in dictionaries
+    means = dict()
+    standard_errors = dict()
+
+    for statistic_index in range(len(mean_statistics)):
+        statistic_label = statistics_labels[statistic_index]
+
+        means[statistic_label] = mean_statistics[statistic_index]
+        standard_errors[statistic_label] = standard_errors_array[statistic_index]
+
+    # Compute the confidence intervals.
+    lower_percentile_index = int(bootstrap_samples * (1 - percentile) / 2)
+    upper_percentile_index = int(bootstrap_samples * (1 + percentile) / 2)
+
+    confidence_intervals = dict()
+
+    for statistic_index in range(len(mean_statistics)):
+        statistic_label = statistics_labels[statistic_index]
+
+        sorted_samples = np.sort(sample_statistics[:, statistic_index])
+
+        confidence_intervals[statistic_label] = ((sorted_samples[lower_percentile_index],
+                                                  sorted_samples[upper_percentile_index]))
+
+    return means, standard_errors, confidence_intervals
 
 
 def find_smirks_parameters(parameter_tag='vdW', *smiles_patterns):
@@ -220,20 +367,32 @@ def smiles_to_png(smiles, file_path, image_size=200):
     oedepict.OERenderMolecule(file_path, display)
 
 
-def plot_estimated_vs_experiment(properties_by_type, figure_size=6.5, dots_per_inch=400,
-                                 font=None, marker_size='7'):
+def plot_estimated_vs_experiment(properties_by_type, results_paths, figure_size=3.5,
+                                 dots_per_inch=400, font=None, marker_size='7'):
 
-    if font is None:
-        font = {'size': 18}
-
-    matplotlib.rc('font', **font)
+    matplotlib.rc('font', **(font if font is not None else {'size': 16}))
 
     for property_type in properties_by_type:
 
         preferred_unit = preferred_units[property_type]
-        pyplot.figure(figsize=(figure_size, figure_size), dpi=dots_per_inch)
 
-        for results_name in properties_by_type[property_type]:
+        figure, axes = pyplot.subplots(nrows=1,
+                                       ncols=len(results_paths),
+                                       sharey='all',
+                                       dpi=dots_per_inch,
+                                       figsize=(figure_size * len(results_paths), figure_size))
+
+        title = ' '.join(re.sub('([A-Z][a-z]+)', r' \1',
+                                re.sub('([A-Z]+)', r' \1', property_type)).split()).title()
+
+        if preferred_unit != unit.dimensionless:
+            title = f'{title} ({preferred_unit:~})'
+
+        figure.suptitle(title)
+
+        axes[0].set_ylabel('NIST ThermoML')
+
+        for column_index, results_name in enumerate(results_paths):
 
             measured_values = []
             estimated_values = []
@@ -241,54 +400,48 @@ def plot_estimated_vs_experiment(properties_by_type, figure_size=6.5, dots_per_i
             estimated_uncertainties = []
 
             for measured_property, estimated_property in properties_by_type[property_type][results_name]:
-
                 measured_values.append(measured_property.value.to(preferred_unit).magnitude)
 
                 estimated_values.append(estimated_property.value.to(preferred_unit).magnitude)
                 estimated_uncertainties.append(estimated_property.uncertainty.to(preferred_unit).magnitude)
 
-            pyplot.errorbar(x=estimated_values,
-                            y=measured_values,
-                            xerr=estimated_uncertainties,
-                            fmt='x',
-                            label=results_name,
-                            markersize=marker_size)
+            means, _, _ = compute_bootstrapped_statistics(properties_by_type[property_type][results_name],
+                                                          bootstrap_samples=1)
 
-        pyplot.legend(bbox_to_anchor=(1.04, 0.5), loc='center left', borderaxespad=0)
+            axis = axes[column_index]
+            axis.locator_params(nbins=5)
 
-        pyplot.xlim(*axis_bounds[property_type])
-        pyplot.ylim(*axis_bounds[property_type])
+            axis.text(0.03, 0.90, f'$R^2$ = {means[Statistics.R2]:.4f}', transform=axis.transAxes)
 
-        pyplot.xlabel('Estimated')
-        pyplot.ylabel('NIST ThermoML')
+            axis.errorbar(x=estimated_values,
+                          y=measured_values,
+                          xerr=estimated_uncertainties,
+                          fmt='x',
+                          label=results_name,
+                          markersize=marker_size)
 
-        if ((1.0e-2 > abs(axis_bounds[property_type][0]) > 0.0) or
-            (1.0e-2 > abs(axis_bounds[property_type][1]) > 0.0)):
-            pyplot.ticklabel_format(style='sci', axis='both', scilimits=(0, 0))
-        else:
-            pyplot.ticklabel_format(style='plain', axis='both')
+            axis.set_xlim(*axis_bounds[property_type])
+            axis.set_ylim(*axis_bounds[property_type])
 
-        pyplot.gca().grid(axis='both', linestyle='--', lw=1.0, color='black', alpha=0.2)
-        pyplot.gca().set_aspect('equal')
+            axis.set_xlabel(results_name.capitalize())
 
-        pyplot.draw()
+            if ((1.0e-2 > abs(axis_bounds[property_type][0]) > 0.0) or
+                    (1.0e-2 > abs(axis_bounds[property_type][1]) > 0.0)):
+                axis.ticklabel_format(style='sci', axis='both', scilimits=(0, 0))
+            else:
+                axis.ticklabel_format(style='plain', axis='both')
 
-        title = ' '.join(re.sub('([A-Z][a-z]+)', r' \1',
-                         re.sub('([A-Z]+)', r' \1', property_type)).split()).title()
+            axis.grid(axis='both', linestyle='--', lw=1.0, color='black', alpha=0.2)
+            axis.set_aspect('equal')
 
-        if preferred_unit != unit.dimensionless:
-            title = f'{title} ({str(preferred_unit)})'
-
-        pyplot.title(title)
-        pyplot.savefig(f'{property_type}.pdf', bbox_inches='tight')
+        pyplot.savefig(os.path.join('plots', f'{property_type}.pdf'),
+                       bbox_inches='tight')
 
 
-def plot_per_property_mse(properties_by_type, figure_size=6.5, dots_per_inch=400, font=None):
+def plot_per_property_statistic(properties_by_type, statistics_type, figure_size=6.5,
+                                dots_per_inch=400, font=None):
 
-    if font is None:
-        font = {'size': 18}
-
-    matplotlib.rc('font', **font)
+    matplotlib.rc('font', **(font if font is not None else {'size': 16}))
 
     for property_type in properties_by_type:
 
@@ -303,60 +456,54 @@ def plot_per_property_mse(properties_by_type, figure_size=6.5, dots_per_inch=400
 
         for results_name in properties_by_type[property_type]:
 
-            mse, mse_std = compute_mse(properties_by_type[property_type][results_name])
+            means, _, confidence_intervals = compute_bootstrapped_statistics(
+                properties_by_type[property_type][results_name]
+            )
 
-            bar_values.append(mse)
-            bar_errors.append(mse_std)
+            bar_values.append(means[statistics_type])
+            bar_errors.append([means[statistics_type] - confidence_intervals[statistics_type][0],
+                               confidence_intervals[statistics_type][1] - means[statistics_type]])
 
         pyplot.bar(x=bar_indices,
                    height=bar_values,
-                   yerr=bar_errors,
+                   yerr=np.array(bar_errors).T,
                    align='center')
 
         pyplot.xticks(bar_indices, bar_labels, rotation=90)
 
+        statistic_unit = compute_statistic_unit(preferred_unit, statistics_type)
+        unit_string = (
+            f' {statistic_unit:~}' if statistic_unit is not None and statistic_unit != unit.dimensionless else ''
+        )
+
         pyplot.xlabel('Force Fields')
-        pyplot.ylabel('MSE')
+        pyplot.ylabel(f'{str(statistics_type.value)}{unit_string}')
 
         title = ' '.join(re.sub('([A-Z][a-z]+)', r' \1',
-                         re.sub('([A-Z]+)', r' \1', property_type)).split()).title()
+                                re.sub('([A-Z]+)', r' \1', property_type)).split()).title()
 
         if preferred_unit != unit.dimensionless:
-            title = f'{title} ({str(preferred_unit)})'
+            title = f'{title}'
 
         pyplot.title(title)
-        pyplot.savefig(f'{property_type}_MSE.pdf', bbox_inches='tight')
+
+        pyplot.savefig(os.path.join('plots', f'{property_type}_{str(statistics_type.value)}.pdf'),
+                       bbox_inches='tight')
 
 
-def print_per_property_mse(results_paths, properties_by_type):
+def plot_per_substance_statistic(properties_by_type, statistics_type,
+                                 dots_per_inch=400, font=None):
 
-    header_string = f'Property Type'
+    matplotlib.rc('font', **(font if font is not None else {'size': 16}))
 
-    for results_path in results_paths:
-        header_string = ','.join([header_string, results_path, f'{results_path} MSE'])
-
-    print('Property Type,' + ','.join(results_paths))
-
-    for property_type in properties_by_type:
-
-        row_string = f'{property_type}'
-
-        for results_path in results_paths:
-
-            mse, mse_std = compute_mse(properties_by_type[property_type][results_path])
-            row_string = ','.join([row_string, f'{mse:.6e}', f'{mse_std:.6e}'])
-
-
-def plot_per_substance_rmse(properties_by_type):
-
+    # Set up a directory to create images in.
     os.makedirs('images', exist_ok=True)
 
     for property_type in properties_by_type:
 
-        preferred_unit = preferred_units[property_type]
-
         properties_by_smiles = defaultdict(lambda: defaultdict(list))
 
+        # Extract the per smiles data.
         for results_name in properties_by_type[property_type]:
 
             for measured_property, estimated_property in properties_by_type[property_type][results_name]:
@@ -364,31 +511,42 @@ def plot_per_substance_rmse(properties_by_type):
                 smiles_tuple = substance_to_smiles_tuples(measured_property.substance)
                 properties_by_smiles[smiles_tuple][results_name].append((measured_property, estimated_property))
 
-        pyplot.figure(figsize=(8.5, 1.5 * len(properties_by_smiles)))
+        # Extract statistics about the data and use these to determine the axis bounds
+        minimum_axis_value = 1e100
+        maximum_axis_value = -1e100
 
-        title = ' '.join(re.sub('([A-Z][a-z]+)', r' \1',
-                                re.sub('([A-Z]+)', r' \1', property_type)).split()).title()
-
-        if preferred_unit != unit.dimensionless:
-            title = f'{title} ({str(preferred_unit ** 2)}) MSE'
-
-        pyplot.title(title)
-
-        subplot_grid_spec = gridspec.GridSpec(len(properties_by_smiles), 2, width_ratios=[2, 5])
-
-        # Determine the axis bounds
-        minimum_value = 1e100
-        maximum_value = -1e100
+        mean_statistics: Dict[str, Dict[str, float]] = defaultdict(dict)
+        confidence_intervals: Dict[str, Dict[str, Tuple[float, float]]] = defaultdict(dict)
 
         for row_index, smiles_tuple in enumerate(properties_by_smiles):
 
             for results_name in properties_by_smiles[smiles_tuple]:
+                result_means, _, result_confidence_intervals = compute_bootstrapped_statistics(
+                    properties_by_smiles[smiles_tuple][results_name]
+                )
 
-                mse, _ = compute_mse(properties_by_smiles[smiles_tuple][results_name])
+                mean_statistics[smiles_tuple][results_name] = result_means[statistics_type]
+                confidence_intervals[smiles_tuple][results_name] = result_confidence_intervals[statistics_type]
 
-                minimum_value = np.minimum(minimum_value, mse)
-                maximum_value = np.maximum(maximum_value, mse)
+                minimum_axis_value = np.minimum(minimum_axis_value, result_confidence_intervals[statistics_type][0])
+                maximum_axis_value = np.maximum(maximum_axis_value, result_confidence_intervals[statistics_type][1])
 
+        # Set up the figure subplots
+        figure, axes = pyplot.subplots(nrows=len(properties_by_smiles),
+                                       ncols=2,
+                                       sharex='all',
+                                       dpi=dots_per_inch,
+                                       figsize=(8.5, 1.7 * len(properties_by_smiles)))
+
+        statistic_unit = compute_statistic_unit(preferred_units[property_type], statistics_type)
+
+        unit_string = (
+            f' {statistic_unit:~}' if statistic_unit is not None and statistic_unit != unit.dimensionless else ''
+        )
+
+        axes[-1, 1].set_xlabel(f'{str(statistics_type.value)}{unit_string}')
+
+        # Draw the statistic plots.
         for row_index, smiles_tuple in enumerate(properties_by_smiles):
 
             bar_values = []
@@ -399,33 +557,34 @@ def plot_per_substance_rmse(properties_by_type):
 
             for results_name in properties_by_smiles[smiles_tuple]:
 
-                mse, mse_std = compute_mse(properties_by_smiles[smiles_tuple][results_name])
+                result_mean = mean_statistics[smiles_tuple][results_name]
+                result_confidence_intervals = confidence_intervals[smiles_tuple][results_name]
 
-                bar_values.append(mse)
-                bar_errors.append(mse_std)
+                bar_values.append(result_mean)
+                bar_errors.append([result_mean - result_confidence_intervals[0],
+                                   result_confidence_intervals[1] - result_mean])
 
-            pyplot.subplot(subplot_grid_spec[row_index * 2 + 1])
+            axis = axes[row_index, 1]
+            axis.set_xlim(minimum_axis_value * 0.9, maximum_axis_value * 1.1)
+            axis.set_xscale('log')
 
-            pyplot.xlim(minimum_value, maximum_value)
-            pyplot.xscale('log')
+            axis.barh(y=bar_indices, width=bar_values, tick_label=bar_labels,
+                      height=0.85, color='C0', align='center', xerr=np.array(bar_errors).T)
 
-            pyplot.barh(y=bar_indices, width=bar_values, tick_label=bar_labels,
-                        height=0.85, color='C0', align='center', xerr=bar_errors)
+        figure.tight_layout()
 
-        pyplot.tight_layout()
-
-        plot_size = pyplot.gcf().get_size_inches() * pyplot.gcf().dpi
+        plot_size = figure.get_size_inches() * figure.dpi
         base_image_height = plot_size[1] / len(properties_by_smiles)
 
+        # Draw the substance images.
         for row_index, smiles_tuple in enumerate(properties_by_smiles):
 
-            pyplot.subplot(subplot_grid_spec[row_index * 2])
-            pyplot.axis('off')
+            axis = axes[row_index, 0]
+            axis.axis('off')
 
             image_size = int(base_image_height / len(smiles_tuple))
 
             for index, smiles in enumerate(smiles_tuple):
-
                 image_base_name = smiles.replace('/', '').replace('\\', '')
 
                 image_path = os.path.join('images', f'{image_base_name}_{image_size}.png')
@@ -438,83 +597,129 @@ def plot_per_substance_rmse(properties_by_type):
 
                 pyplot.figimage(molecule_image, image_size * index, image_y_height)
 
-        pyplot.savefig(f'{property_type}_MSE_per_substance.pdf', bbox_inches='tight')
-        print('Done')
+        figure.savefig(os.path.join('plots', f'{property_type}_{str(statistics_type.value)}_per_substance.pdf'),
+                       bbox_inches='tight')
 
 
-def print_mse_per_smirks(property_tuples):
+def plot_per_smirks_statistic(properties_by_type, statistics_type, smirnoff_results_paths,
+                              dots_per_inch=400, font=None):
 
-    vdw_smirks_of_interest = [
-        '[#1:1]-[#6X4]',
-        '[#1:1]-[#6X4]-[#7,#8,#9,#16,#17,#35]',
-        '[#1:1]-[#6X3]',
-        '[#1:1]-[#6X3]~[#7,#8,#9,#16,#17,#35]',
-        '[#1:1]-[#8]',
-        '[#6:1]',
-        '[#6X4:1]',
-        '[#8:1]',
-        '[#8X2H0+0:1]',
-        '[#8X2H1+0:1]',
-        '[#7:1]',
-        '[#16:1]',
-        '[#9:1]',
-        '[#17:1]',
-        '[#35:1]'
-    ]
+    matplotlib.rc('font', **(font if font is not None else {'size': 16}))
 
-    property_tuples_by_smirks = defaultdict(list)
+    for property_type in properties_by_type:
 
-    for measured_property, estimated_property in property_tuples:
+        properties_by_smirks = defaultdict(lambda: defaultdict(list))
 
-        smiles = [component.smiles for component in measured_property.substance.components]
+        for results_name in properties_by_type[property_type]:
 
-        all_smirks = find_smirks_parameters('vdW', *smiles)
-        smirks = [smirks_pattern for smirks_pattern in all_smirks.keys() if
-                  smirks_pattern in vdw_smirks_of_interest and len(all_smirks[smirks_pattern]) > 0]
+            if results_name not in smirnoff_results_paths:
+                continue
 
-        for smirks_pattern in smirks:
-            property_tuples_by_smirks[smirks_pattern].append((measured_property, estimated_property))
+            for measured_property, estimated_property in properties_by_type[property_type][results_name]:
 
-    results = dict()
+                smiles_tuple = substance_to_smiles_tuples(measured_property.substance)
 
-    for smirks_pattern in property_tuples_by_smirks:
-        results[smirks_pattern] = compute_mse(property_tuples_by_smirks[smirks_pattern])
+                all_smirks = find_smirks_parameters('vdW', *smiles_tuple)
 
-    # for property_type in all_results_by_type:
-    #
-    #     print(f'\n{property_type}\n')
-    #
-    #     print('VDW SMIRKS|' + '|'.join(smirnoff_results_paths))
-    #
-    #     mse_by_smirks_path = defaultdict(dict)
-    #
-    #     for results_path in smirnoff_results_paths:
-    #         for smirks in mse_by_type_path_smirks[property_type][results_path]:
-    #             mse_by_smirks_path[smirks][results_path] = mse_by_type_path_smirks[property_type][results_path][smirks]
-    #
-    #     for smirks in mse_by_smirks_path:
-    #
-    #         output = f'{smirks}|'
-    #
-    #         for results_path in smirnoff_results_paths:
-    #             output += ('-' if results_path not in mse_by_smirks_path[smirks] else
-    #                        str(mse_by_smirks_path[smirks][results_path])) + '|'
-    #
-    #         print(output)
-    #
-    #     print(f'\n\n')
+                smirks = [smirks_pattern for smirks_pattern in all_smirks.keys() if
+                          smirks_pattern in optimised_vdw_smirks and len(all_smirks[smirks_pattern]) > 0]
 
-    return results
+                for smirks_pattern in smirks:
+                    properties_by_smirks[smirks_pattern][results_name].append((measured_property, estimated_property))
+
+        # Set up the figure
+        figure = pyplot.figure(dpi=dots_per_inch)
+        axes = figure.add_subplot()
+
+        # Draw the statistic plots.
+        bar_width = 0.25
+
+        bar_indices = np.arange(len(properties_by_smirks), dtype=np.float64)
+        bar_indices *= (len(smirnoff_results_paths) + 1) * bar_width
+
+        bar_labels = [smirks for smirks in properties_by_smirks]
+
+        minimum_value = 1e100
+        maximum_value = -1e100
+
+        for results_name in smirnoff_results_paths:
+
+            bar_values = []
+            bar_errors = []
+
+            for smirks in properties_by_smirks:
+
+                means, _, confidence_intervals = compute_bootstrapped_statistics(
+                    properties_by_smirks[smirks][results_name]
+                )
+
+                lower_delta = means[statistics_type] - confidence_intervals[statistics_type][0]
+                upper_delta = confidence_intervals[statistics_type][1] - means[statistics_type]
+
+                bar_values.append(means[statistics_type])
+                bar_errors.append([lower_delta, upper_delta])
+
+                minimum_value = np.minimum(minimum_value, confidence_intervals[statistics_type][0])
+                maximum_value = np.maximum(maximum_value, confidence_intervals[statistics_type][1])
+
+            axes.bar(x=bar_indices, yerr=np.array(bar_errors).T,
+                     width=bar_width, height=bar_values, label=results_name)
+
+            bar_indices += bar_width
+
+        axes.set_ylim(minimum_value * 0.95, maximum_value * 10)
+        axes.set_yscale('log')
+
+        tick_positions = np.arange(len(properties_by_smirks), dtype=np.float64)
+        tick_positions *= (len(smirnoff_results_paths) + 1) * bar_width
+        tick_positions += len(smirnoff_results_paths) * bar_width * 0.5
+
+        axes.set_xticks(tick_positions)
+        axes.set_xticklabels(bar_labels, rotation=90)
+
+        axes.legend(loc='upper left')
+
+        statistic_unit = compute_statistic_unit(preferred_units[property_type], statistics_type)
+
+        unit_string = (
+            f' {statistic_unit:~}' if statistic_unit is not None and statistic_unit != unit.dimensionless else ''
+        )
+
+        title = ' '.join(re.sub('([A-Z][a-z]+)', r' \1',
+                                re.sub('([A-Z]+)', r' \1', property_type)).split()).title()
+
+        axes.set_title(f'{title}{unit_string}')
+
+        figure.canvas.draw()
+        figure.savefig(os.path.join('plots', f'{property_type}_{str(statistics_type.value)}_per_smirks.pdf'),
+                       bbox_inches='tight')
+
+
+def print_per_property_statistic(results_paths, statistics_type, properties_by_type):
+    header_string = f'Property Type'
+
+    for results_path in results_paths:
+        header_string = ','.join([header_string, results_path, f'{results_path} {str(statistics_type.value)}'])
+
+    print(header_string)
+
+    for property_type in properties_by_type:
+
+        row_string = f'{property_type}'
+
+        for results_path in results_paths:
+            means, errors, _ = compute_bootstrapped_statistics(properties_by_type[property_type][results_path])
+            row_string = ','.join([row_string, f'{means[statistics_type]:.6e}', f'{errors[statistics_type]:.6e}'])
 
 
 def main():
 
     # Load the original data set.
-    with open('curated_data_set.json', 'r') as file:
+    with open(os.path.join('raw_data', 'curated_data_set.json'), 'r') as file:
         measured_data_set = json.load(file, cls=TypedJSONDecoder)
 
     results_paths = ['smirnoff99frosst 1.1.0', 'parsley 0.0.9', 'parsley rc 1', 'gaff 1.81', 'gaff 2.11']
-    # smirnoff_results_paths = ['smirnoff99frosst 1.1.0', 'parsley 0.0.9', 'parsley rc 1']
+    smirnoff_results_paths = ['smirnoff99frosst 1.1.0', 'parsley 0.0.9', 'parsley rc 1']
 
     all_results_by_type = defaultdict(lambda: defaultdict(list))
 
@@ -525,13 +730,11 @@ def main():
         for property_type in properties_by_type:
             all_results_by_type[property_type][results_path] = properties_by_type[property_type]
 
-    # print_per_property_mse(results_paths, all_results_by_type)
+    plot_estimated_vs_experiment(all_results_by_type, results_paths)
 
-    plot_estimated_vs_experiment(all_results_by_type, dots_per_inch=200)
-    plot_per_property_mse(all_results_by_type, dots_per_inch=200, font={'size': 16})
-
-    plot_per_substance_rmse(all_results_by_type)
-    pyplot.show()
+    plot_per_property_statistic(all_results_by_type, Statistics.RMSE)
+    plot_per_substance_statistic(all_results_by_type, Statistics.RMSE)
+    plot_per_smirks_statistic(all_results_by_type, Statistics.RMSE, smirnoff_results_paths)
 
 
 if __name__ == '__main__':

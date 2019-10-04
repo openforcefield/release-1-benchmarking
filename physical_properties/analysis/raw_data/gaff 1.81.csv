@@ -1,0 +1,183 @@
+,Temperature,Pressure,Phase,Number Of Components,Component 1,Mole Fraction 1,Component 2,Mole Fraction 2,DielectricConstant Value,DielectricConstant Uncertainty,EnthalpyOfVaporization Value,EnthalpyOfVaporization Uncertainty,ExcessMolarVolume Value,ExcessMolarVolume Uncertainty,EnthalpyOfMixing Value,EnthalpyOfMixing Uncertainty,Density Value,Density Uncertainty
+0,298.15 kelvin,101.0 kilopascal,2,2,C(CCO)CO,0.7947,O,0.20530000000000004,,,,,,,-114.50419395838253 kilogram * meter ** 2 / mole / second ** 2,16.551686854874024 kilogram * meter ** 2 / mole / second ** 2,,
+1,303.15 kelvin,101.0 kilopascal,2,1,C(CO)N,1.0,,,25.67560388392685 dimensionless,1.4874048913503448 dimensionless,,,,,,,1.0674243550058553 gram / milliliter,0.00011273069383226286 gram / milliliter
+2,298.15 kelvin,101.0 kilopascal,2,2,C(COCCO)O,0.7906,O,0.2094,,,,,,,131.24027599787223 kilogram * meter ** 2 / mole / second ** 2,16.273890135276556 kilogram * meter ** 2 / mole / second ** 2,,
+3,298.15 kelvin,101.325 kilopascal,6,1,C/C=C/C=C/COC(=O)C,1.0,,,,,64716.46144514983 kilogram * meter ** 2 / mole / second ** 2,316.0052806405404 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+4,298.15 kelvin,101.0 kilopascal,2,1,C1CC(=O)OC1,1.0,,,35.19521824630509 dimensionless,1.287431042423774 dimensionless,,,,,,,1.1353272987278695 gram / milliliter,7.22457919823533e-05 gram / milliliter
+5,298.15 kelvin,101.325 kilopascal,2,1,CC(=C)C(=O)OCCO,1.0,,,,,,,,,,,1.0846309705905322 gram / milliliter,0.00031198546025750537 gram / milliliter
+6,298.15 kelvin,101.325 kilopascal,6,1,CCOC(=O)/C=C(/C)\O,1.0,,,,,58522.97227777058 kilogram * meter ** 2 / mole / second ** 2,214.27851845539098 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+7,308.15 kelvin,101.0 kilopascal,2,2,Cc1ccccc1N,0.7735,c1ccncc1,0.2265000000000001,,,,,,,-913.4004557130102 kilogram * meter ** 2 / mole / second ** 2,17.473624200560298 kilogram * meter ** 2 / mole / second ** 2,,
+8,303.15 kelvin,101.325 kilopascal,2,2,C(CBr)Br,0.7903,C(=C(Cl)Cl)Cl,0.2097,,,,,-2.463677783698083e-07 meter ** 3 / mole,1.8360788747023526e-08 meter ** 3 / mole,,,,
+9,303.15 kelvin,101.325 kilopascal,2,2,C(CBr)Br,0.2077,C(=C(Cl)Cl)Cl,0.7923,,,,,-2.1090439597522368e-07 meter ** 3 / mole,1.624271166096966e-08 meter ** 3 / mole,,,,
+10,298.15 kelvin,101.325 kilopascal,2,1,C(=C(Cl)Cl)Cl,1.0,,,,,,,,,,,1.3824580220566374 gram / milliliter,0.00038403106686897873 gram / milliliter
+11,303.28 kelvin,100.4 kilopascal,2,1,C(=C(F)F)(C(F)(F)F)F,1.0,,,,,,,,,,,1.2139632627048005 gram / milliliter,0.0004036081701955005 gram / milliliter
+12,293.15 kelvin,101.325 kilopascal,2,1,C(=O)(C(F)(F)F)O,1.0,,,,,,,,,,,1.5868528061231775 gram / milliliter,0.0003517063573395897 gram / milliliter
+13,293.15 kelvin,101.0 kilopascal,2,1,C(C(Br)Br)(Br)Br,1.0,,,,,,,,,,,2.9230749857653024 gram / milliliter,0.00034052299685242586 gram / milliliter
+14,298.15 kelvin,101.325 kilopascal,2,1,C(C(C(C(C(F)(F)Br)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F,1.0,,,,,,,,,,,1.972416870965512 gram / milliliter,0.0004430415577303393 gram / milliliter
+15,298.15 kelvin,101.0 kilopascal,2,2,C(C(F)(F)F)(C(F)(F)F)O,0.205,O,0.795,,,,,4.507913645554262e-07 meter ** 3 / mole,1.5966152429966515e-08 meter ** 3 / mole,,,,
+16,298.15 kelvin,101.0 kilopascal,2,2,C(C(F)(F)F)(C(F)(F)F)O,0.8065,O,0.1935,,,,,3.392417897426852e-07 meter ** 3 / mole,1.5228465026453433e-08 meter ** 3 / mole,,,,
+17,298.15 kelvin,101.325 kilopascal,2,1,C(C(F)(F)F)(C(F)(F)F)O,1.0,,,,,,,,,,,1.565584033930685 gram / milliliter,0.00035555053754546793 gram / milliliter
+18,293.2195 kelvin,100.049 kilopascal,2,1,C(C(F)(F)F)F,1.0,,,,,,,,,,,1.1922743944327083 gram / milliliter,0.00041597296477016477 gram / milliliter
+19,298.15 kelvin,101.0 kilopascal,2,2,C(C(F)(F)F)O,0.20133,CCCO,0.79867,,,,,,,-446.8394126968851 kilogram * meter ** 2 / mole / second ** 2,17.571843200289607 kilogram * meter ** 2 / mole / second ** 2,,
+20,298.15 kelvin,101.3 kilopascal,2,2,C1CCOC1,0.7170000000000001,C(C(F)(F)F)O,0.28300000000000003,,,,,,,-1630.3292089327297 kilogram * meter ** 2 / mole / second ** 2,18.256976211569814 kilogram * meter ** 2 / mole / second ** 2,,
+21,298.15 kelvin,101.0 kilopascal,2,2,C(C(F)(F)F)O,0.29705,CO,0.70295,,,,,,,-477.30506324810267 kilogram * meter ** 2 / mole / second ** 2,16.627221080359934 kilogram * meter ** 2 / mole / second ** 2,,
+22,298.15 kelvin,101.0 kilopascal,2,2,C(C(F)(F)F)O,0.29878000000000005,O,0.70122,,,,,,,764.6982220847349 kilogram * meter ** 2 / mole / second ** 2,16.798888365812466 kilogram * meter ** 2 / mole / second ** 2,,
+23,298.15 kelvin,101.0 kilopascal,2,2,C(C(F)(F)F)O,0.29919,CCO,0.7008099999999999,,,,,,,-546.2007445901036 kilogram * meter ** 2 / mole / second ** 2,18.06588844361687 kilogram * meter ** 2 / mole / second ** 2,,
+24,298.15 kelvin,101.0 kilopascal,2,2,C(C(F)(F)F)O,0.7077899999999999,O,0.29220999999999997,,,,,,,496.1000530611782 kilogram * meter ** 2 / mole / second ** 2,16.752887892760718 kilogram * meter ** 2 / mole / second ** 2,,
+25,298.15 kelvin,101.0 kilopascal,2,2,C(C(F)(F)F)O,0.70985,CO,0.29015,,,,,,,-425.2014330835227 kilogram * meter ** 2 / mole / second ** 2,17.026772807353243 kilogram * meter ** 2 / mole / second ** 2,,
+26,298.15 kelvin,101.3 kilopascal,2,2,C1CCOC1,0.212,C(C(F)(F)F)O,0.7879999999999999,,,,,,,-1388.6459556072805 kilogram * meter ** 2 / mole / second ** 2,17.149881301172993 kilogram * meter ** 2 / mole / second ** 2,,
+27,298.15 kelvin,101.0 kilopascal,2,2,C(C(F)(F)F)O,0.79638,CCO,0.20362,,,,,,,-279.8179548037442 kilogram * meter ** 2 / mole / second ** 2,17.130806659797294 kilogram * meter ** 2 / mole / second ** 2,,
+28,298.15 kelvin,101.0 kilopascal,2,2,C(C(F)(F)F)O,0.79867,CCCO,0.20133,,,,,,,-227.05588263340178 kilogram * meter ** 2 / mole / second ** 2,17.417744537222845 kilogram * meter ** 2 / mole / second ** 2,,
+29,298.15 kelvin,101.325 kilopascal,2,1,C(C(F)(F)F)O,1.0,,,,,,,,,,,1.3560342764102367 gram / milliliter,0.0003929416435745305 gram / milliliter
+30,298.15 kelvin,101.0 kilopascal,2,2,C(CBr)Br,0.2146,CCCCOC(=O)C,0.7854,,,,,,,-536.4114288990459 kilogram * meter ** 2 / mole / second ** 2,16.277467796691408 kilogram * meter ** 2 / mole / second ** 2,,
+31,298.15 kelvin,101.0 kilopascal,2,2,CCCCOC=O,0.7738,C(CBr)Br,0.2262,,,,,-2.2404010817961176e-07 meter ** 3 / mole,1.7059576048110726e-08 meter ** 3 / mole,,,,
+32,298.15 kelvin,101.0 kilopascal,2,2,C(CBr)Br,0.2547,CCCCOC(=O)C,0.7453000000000001,,,,,-2.4463380698856133e-07 meter ** 3 / mole,1.704329737036965e-08 meter ** 3 / mole,,,,
+33,298.15 kelvin,101.0 kilopascal,2,2,CCCCOC=O,0.7275,C(CBr)Br,0.2725,,,,,,,-292.61097725697255 kilogram * meter ** 2 / mole / second ** 2,17.267573288127824 kilogram * meter ** 2 / mole / second ** 2,,
+34,298.15 kelvin,101.0 kilopascal,2,2,CCCCOC=O,0.3993,C(CBr)Br,0.6007,,,,,-2.4146629394315483e-07 meter ** 3 / mole,1.6721594779091593e-08 meter ** 3 / mole,-205.28844481745182 kilogram * meter ** 2 / mole / second ** 2,17.752615808336476 kilogram * meter ** 2 / mole / second ** 2,,
+35,298.15 kelvin,101.0 kilopascal,2,2,C(CBr)Br,0.7476,CCCCOC(=O)C,0.2524,,,,,-2.867749171367966e-07 meter ** 3 / mole,1.8405299774265536e-08 meter ** 3 / mole,,,,
+36,298.15 kelvin,101.0 kilopascal,2,2,C(CBr)Br,0.7661,CCCCOC(=O)C,0.2339,,,,,,,-546.7794211371934 kilogram * meter ** 2 / mole / second ** 2,19.73551834336703 kilogram * meter ** 2 / mole / second ** 2,,
+37,295.15 kelvin,101.325 kilopascal,2,1,C(CBr)Br,1.0,,,,,,,,,,,2.178526382867515 gram / milliliter,0.00040469988677510756 gram / milliliter
+38,298.15 kelvin,101.325 kilopascal,2,1,C(CBr)Cl,1.0,,,,,,,,,,,1.6915024057470252 gram / milliliter,0.00043681961364735235 gram / milliliter
+39,298.15 kelvin,101.325 kilopascal,2,1,C(CCBr)CCl,1.0,,,,,,,,,,,1.4495545725905334 gram / milliliter,0.0003414006072340297 gram / milliliter
+40,298.15 kelvin,101.0 kilopascal,2,2,O,0.7847,C(CCO)CO,0.2153,,,,,1.6357608840232888e-08 meter ** 3 / mole,1.3681748933512879e-08 meter ** 3 / mole,,,,
+41,298.15 kelvin,101.0 kilopascal,2,2,C(CCO)CO,0.2658,O,0.7342,,,,,,,560.2037597292219 kilogram * meter ** 2 / mole / second ** 2,17.054058788520475 kilogram * meter ** 2 / mole / second ** 2,,
+42,298.15 kelvin,101.0 kilopascal,2,2,O,0.2297,C(CCO)CO,0.7703,,,,,-7.182508703785638e-08 meter ** 3 / mole,1.5250068303428966e-08 meter ** 3 / mole,,,,
+43,298.15 kelvin,101.325 kilopascal,2,1,C(CCO)CO,1.0,,,,,75663.55224875381 kilogram * meter ** 2 / mole / second ** 2,363.9222925479159 kilogram * meter ** 2 / mole / second ** 2,,,,,1.0181180381668982 gram / milliliter,0.000303387519989021 gram / milliliter
+44,298.15 kelvin,101.325 kilopascal,2,1,C(CCl)CBr,1.0,,,,,,,,,,,1.5468496082997512 gram / milliliter,0.0003837007844390593 gram / milliliter
+45,298.15 kelvin,101.0 kilopascal,2,2,C(CO)CO,0.2087,O,0.7913,,,,,,,513.4506607104777 kilogram * meter ** 2 / mole / second ** 2,17.28775080161787 kilogram * meter ** 2 / mole / second ** 2,,
+46,298.15 kelvin,101.0 kilopascal,2,2,O,0.7551,C(CO)CO,0.2449,,,,,2.811307580372573e-08 meter ** 3 / mole,1.545950771192621e-08 meter ** 3 / mole,,,,
+47,298.15 kelvin,101.0 kilopascal,2,2,C(CO)CO,0.743,O,0.257,,,,,,,194.59465491155788 kilogram * meter ** 2 / mole / second ** 2,16.614077938309624 kilogram * meter ** 2 / mole / second ** 2,,
+48,298.15 kelvin,101.0 kilopascal,2,2,O,0.2554,C(CO)CO,0.7446,,,,,-5.164362544919155e-08 meter ** 3 / mole,1.545081073628464e-08 meter ** 3 / mole,,,,
+49,298.15 kelvin,101.325 kilopascal,2,1,C(CO)CO,1.0,,,,,67345.32564056412 kilogram * meter ** 2 / mole / second ** 2,332.2367665522607 kilogram * meter ** 2 / mole / second ** 2,,,,,1.0531516620458115 gram / milliliter,0.0002896318523265421 gram / milliliter
+50,303.15 kelvin,101.325 kilopascal,2,1,C(CO)N(CCO)CCO,1.0,,,2.6361935119040387 dimensionless,0.3710089857682096 dimensionless,,,,,,,1.1479748841668385 gram / milliliter,0.00030340251634590075 gram / milliliter
+51,303.15 kelvin,101.325 kilopascal,2,1,C(CO)NCCO,1.0,,,7.53607620283742 dimensionless,0.9531148779481557 dimensionless,,,,,,,1.1195092459106069 gram / milliliter,0.0002852535902186281 gram / milliliter
+52,298.15 kelvin,101.0 kilopascal,2,2,C(CO)O,0.20509999999999995,O,0.7949,,,,,,,280.9882118322639 kilogram * meter ** 2 / mole / second ** 2,16.927801017978425 kilogram * meter ** 2 / mole / second ** 2,,
+53,298.15 kelvin,101.0 kilopascal,2,2,C(CO)O,0.25008,O,0.7499199999999999,,,,,-4.6698438573177414e-08 meter ** 3 / mole,1.4317128846556504e-08 meter ** 3 / mole,,,,
+54,298.15 kelvin,101.0 kilopascal,2,2,C(CO)O,0.77876,O,0.22124,,,,,-2.911960949413927e-08 meter ** 3 / mole,1.4531206151587298e-08 meter ** 3 / mole,,,,
+55,298.15 kelvin,101.0 kilopascal,2,2,C(CO)O,0.7908999999999999,O,0.2091,,,,,,,130.1330449909874 kilogram * meter ** 2 / mole / second ** 2,14.89893191938125 kilogram * meter ** 2 / mole / second ** 2,,
+56,298.15 kelvin,101.325 kilopascal,2,1,C(CO)O,1.0,,,,,60738.63453302421 kilogram * meter ** 2 / mole / second ** 2,219.87588934843575 kilogram * meter ** 2 / mole / second ** 2,,,,,1.1185015934361957 gram / milliliter,0.00032018825493062024 gram / milliliter
+57,303.15 kelvin,101.325 kilopascal,2,1,C(CO)O,1.0,,,24.64531771255429 dimensionless,1.424688391016175 dimensionless,,,,,,,1.1131777660855082 gram / milliliter,0.0001520080578320128 gram / milliliter
+58,298.15 kelvin,101.0 kilopascal,2,2,C(COCCO)O,0.20020000000000004,O,0.7998,,,,,,,151.65530125992927 kilogram * meter ** 2 / mole / second ** 2,18.33953154512865 kilogram * meter ** 2 / mole / second ** 2,,
+59,298.15 kelvin,101.0 kilopascal,2,1,C(COCCO)O,1.0,,,11.619293466495265 dimensionless,1.233221517831634 dimensionless,,,,,,,1.1432182072709365 gram / milliliter,0.00024379096223662027 gram / milliliter
+60,298.15 kelvin,101.0 kilopascal,2,1,C(COCCOCCO)O,1.0,,,4.459309384120411 dimensionless,0.859690015512717 dimensionless,,,,,,,1.1535015419319028 gram / milliliter,0.0002994737524013115 gram / milliliter
+61,298.15 kelvin,101.325 kilopascal,2,1,C(Cl)(Cl)(Cl)Br,1.0,,,,,,,,,,,1.9938063825451433 gram / milliliter,0.0004232462895910479 gram / milliliter
+62,298.15 kelvin,101.0 kilopascal,2,2,CCC#N,0.7326,C(Cl)(Cl)(Cl)Cl,0.2674,,,,,,,738.3915397693527 kilogram * meter ** 2 / mole / second ** 2,17.20663551202015 kilogram * meter ** 2 / mole / second ** 2,,
+63,298.15 kelvin,101.0 kilopascal,2,2,CCC#N,0.2551,C(Cl)(Cl)(Cl)Cl,0.7449,,,,,,,947.6000700657801 kilogram * meter ** 2 / mole / second ** 2,17.061827100617055 kilogram * meter ** 2 / mole / second ** 2,,
+64,298.15 kelvin,101.325 kilopascal,2,1,C(Cl)(Cl)(Cl)Cl,1.0,,,,,,,,,,,1.56800262439065 gram / milliliter,0.0003119999313336682 gram / milliliter
+65,298.15 kelvin,101.325 kilopascal,2,1,C1CCC(=O)C1,1.0,,,8.852699790978544 dimensionless,0.6124191701573748 dimensionless,,,,,,,0.9195241523189029 gram / milliliter,0.0002903805594882637 gram / milliliter
+66,298.15 kelvin,101.0 kilopascal,2,2,CS(=O)C,0.7569,C1CCC(=O)CC1,0.2431,,,,,,,400.03621675467 kilogram * meter ** 2 / mole / second ** 2,16.938042444769422 kilogram * meter ** 2 / mole / second ** 2,,
+67,303.15 kelvin,101.0 kilopascal,2,2,CS(=O)C,0.7218,C1CCC(=O)CC1,0.2782,,,,,1.534185075808414e-07 meter ** 3 / mole,1.6071468679671826e-08 meter ** 3 / mole,,,,
+68,298.15 kelvin,101.0 kilopascal,2,2,CS(=O)C,0.2762,C1CCC(=O)CC1,0.7238,,,,,,,452.15339048177884 kilogram * meter ** 2 / mole / second ** 2,17.210757487828566 kilogram * meter ** 2 / mole / second ** 2,,
+69,303.15 kelvin,101.0 kilopascal,2,2,CS(=O)C,0.2241,C1CCC(=O)CC1,0.7759,,,,,1.2855082604380352e-07 meter ** 3 / mole,1.636578923326706e-08 meter ** 3 / mole,,,,
+70,298.15 kelvin,101.325 kilopascal,2,1,C1CCC(=O)CC1,1.0,,,10.37998391832637 dimensionless,1.1805207260714028 dimensionless,,,,,,,0.9207844347143739 gram / milliliter,0.0003531899014529787 gram / milliliter
+71,298.15 kelvin,101.325 kilopascal,2,1,C1CCOC1,1.0,,,,,,,,,,,0.8901565710503693 gram / milliliter,0.00033177267892613155 gram / milliliter
+72,298.15 kelvin,101.0 kilopascal,2,1,C1CCS(=O)(=O)C1,1.0,,,18.0582940117068 dimensionless,1.4271848609704771 dimensionless,,,,,,,1.2885675853591265 gram / milliliter,0.00016311751084772431 gram / milliliter
+73,313.15 kelvin,101.0 kilopascal,2,2,C1COCCN1,0.2968,O,0.7032,,,,,,,-1139.1766440612046 kilogram * meter ** 2 / mole / second ** 2,18.779552605675313 kilogram * meter ** 2 / mole / second ** 2,,
+74,298.15 kelvin,101.325 kilopascal,2,1,C1COCCN1,1.0,,,,,,,,,,,1.0825713242786035 gram / milliliter,0.00031712378093839234 gram / milliliter
+75,293.0 kelvin,101.325 kilopascal,2,1,C=CCCl,1.0,,,,,,,,,,,0.8646403502943992 gram / milliliter,0.0004007501284533126 gram / milliliter
+76,298.15 kelvin,101.325 kilopascal,6,1,CC(=CCOC(=O)C)C,1.0,,,,,57771.24092642028 kilogram * meter ** 2 / mole / second ** 2,324.6124314290061 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+77,303.15 kelvin,101.325 kilopascal,2,1,CC(=O)N(C)C,1.0,,,23.04492746302474 dimensionless,1.3726971780713806 dimensionless,,,,,,,0.9289468831017469 gram / milliliter,0.00011810923200185154 gram / milliliter
+78,298.15 kelvin,101.325 kilopascal,6,1,CC(=O)OCCc1ccccc1,1.0,,,,,75412.80658223631 kilogram * meter ** 2 / mole / second ** 2,325.8315173617595 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+79,318.15 kelvin,101.32 kilopascal,2,2,CC(C)(C)O,0.7696000000000001,CC(=O)OC,0.2304,,,,,,,281.12035375757114 kilogram * meter ** 2 / mole / second ** 2,17.467796382393516 kilogram * meter ** 2 / mole / second ** 2,,
+80,303.15 kelvin,101.32 kilopascal,2,2,CC(C)(C)O,0.7519,CC(=O)OC,0.2481,,,,,3.488828285168918e-07 meter ** 3 / mole,1.705774438531926e-08 meter ** 3 / mole,,,,
+81,303.15 kelvin,101.32 kilopascal,2,2,CC(C)(C)O,0.25680000000000003,CC(=O)OC,0.7432,,,,,3.4009819257942023e-07 meter ** 3 / mole,1.7605675805721947e-08 meter ** 3 / mole,,,,
+82,318.15 kelvin,101.32 kilopascal,2,2,CC(C)(C)O,0.2372,CC(=O)OC,0.7628,,,,,,,388.8413621680302 kilogram * meter ** 2 / mole / second ** 2,18.13132035909832 kilogram * meter ** 2 / mole / second ** 2,,
+83,298.15 kelvin,101.325 kilopascal,2,1,CC(=O)OC,1.0,,,,,,,,,,,0.9545144813611416 gram / milliliter,0.00024024606528017496 gram / milliliter
+84,298.15 kelvin,101.325 kilopascal,6,1,CC(=O)c1cccc(c1)OC,1.0,,,,,75541.72215559683 kilogram * meter ** 2 / mole / second ** 2,316.79614926005013 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+85,298.15 kelvin,101.325 kilopascal,6,1,CC(=O)c1ccccc1OC,1.0,,,,,70781.28516631998 kilogram * meter ** 2 / mole / second ** 2,210.86331165018422 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+86,298.15 kelvin,101.325 kilopascal,6,1,CC(=O)c1ccco1,1.0,,,,,52671.17474428075 kilogram * meter ** 2 / mole / second ** 2,183.20248639345203 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+87,298.15 kelvin,101.0 kilopascal,2,1,CC(=O)c1cccs1,1.0,,,16.381196724430445 dimensionless,1.1627169353536542 dimensionless,,,,,,,1.1520019636404228 gram / milliliter,0.00011106529437479693 gram / milliliter
+88,299.15 kelvin,101.32 kilopascal,2,2,CC(C)(C)O,0.27780000000000005,COC=O,0.7222,,,,,3.692849725707106e-07 meter ** 3 / mole,1.5016508680497386e-08 meter ** 3 / mole,1084.3154024872674 kilogram * meter ** 2 / mole / second ** 2,17.628136817061247 kilogram * meter ** 2 / mole / second ** 2,,
+89,299.15 kelvin,101.32 kilopascal,2,2,CC(C)(C)O,0.7127,COC=O,0.2873,,,,,,,1085.9767170139967 kilogram * meter ** 2 / mole / second ** 2,19.067270546830905 kilogram * meter ** 2 / mole / second ** 2,,
+90,299.15 kelvin,101.32 kilopascal,2,2,CC(C)(C)O,0.7581,COC=O,0.2419,,,,,3.773013159316782e-07 meter ** 3 / mole,1.5483400340440454e-08 meter ** 3 / mole,,,,
+91,298.15 kelvin,100.0 kilopascal,2,1,CC(C)(C)O,1.0,,,3.1955850096226346 dimensionless,0.3007348538394752 dimensionless,,,,,,,0.8015153201822751 gram / milliliter,0.0002767815724511743 gram / milliliter
+92,303.15 kelvin,101.325 kilopascal,2,1,CC(C)(CO)N,1.0,,,2.7099369190701252 dimensionless,0.2784236513945849 dimensionless,,,,,,,0.9548549067241048 gram / milliliter,0.00044224992181789597 gram / milliliter
+93,298.15 kelvin,101.0 kilopascal,2,1,CC(C)CO,1.0,,,6.612071502637019 dimensionless,1.3594209110098798 dimensionless,,,,,,,0.8026308811826968 gram / milliliter,0.00028839736057498764 gram / milliliter
+94,300.15 kelvin,101.325 kilopascal,2,1,CC(C)O,1.0,,,9.813900687253454 dimensionless,1.4354072759127703 dimensionless,,,,,,,0.7882130713741241 gram / milliliter,0.0003436422067802746 gram / milliliter
+95,289.15 kelvin,101.325 kilopascal,2,1,CC=O,1.0,,,,,,,,,,,0.785947674194544 gram / milliliter,0.0004383920003497764 gram / milliliter
+96,298.15 kelvin,101.325 kilopascal,2,1,CCC#N,1.0,,,,,,,,,,,0.769241729552946 gram / milliliter,0.00033903007698673723 gram / milliliter
+97,298.15 kelvin,101.0 kilopascal,2,2,CS(=O)C,0.7615000000000001,CCC(=O)C,0.2385,,,,,,,280.03017462768184 kilogram * meter ** 2 / mole / second ** 2,15.814786522200846 kilogram * meter ** 2 / mole / second ** 2,,
+98,303.15 kelvin,101.0 kilopascal,2,2,CS(=O)C,0.7340000000000001,CCC(=O)C,0.266,,,,,-3.057148143131329e-07 meter ** 3 / mole,1.7710768662494946e-08 meter ** 3 / mole,,,,
+99,298.15 kelvin,101.0 kilopascal,2,2,CS(=O)C,0.22030000000000005,CCC(=O)C,0.7797,,,,,,,239.68594539521655 kilogram * meter ** 2 / mole / second ** 2,16.67911833500915 kilogram * meter ** 2 / mole / second ** 2,,
+100,303.15 kelvin,101.0 kilopascal,2,2,CS(=O)C,0.212,CCC(=O)C,0.7879999999999999,,,,,-2.927280962490396e-07 meter ** 3 / mole,1.670631515998021e-08 meter ** 3 / mole,,,,
+101,298.15 kelvin,101.325 kilopascal,2,1,CCC(=O)C,1.0,,,,,,,,,,,0.7757356413618944 gram / milliliter,0.0003229474195745235 gram / milliliter
+102,298.15 kelvin,101.3 kilopascal,2,2,O,0.997803,CCCC(=O)OC,0.002197,,,,,,,-11.084431563816906 kilogram * meter ** 2 / mole / second ** 2,15.424206141422319 kilogram * meter ** 2 / mole / second ** 2,,
+103,298.15 kelvin,101.325 kilopascal,2,1,CCCC(=O)OC,1.0,,,,,,,,,,,0.9029150858319197 gram / milliliter,0.00029434777986437325 gram / milliliter
+104,298.15 kelvin,100.0 kilopascal,2,1,CCCCCCCCO,1.0,,,1.6134125821040353 dimensionless,0.11174745602128353 dimensionless,,,,,,,0.8136471221618216 gram / milliliter,0.00029121422045669634 gram / milliliter
+105,298.15 kelvin,100.0 kilopascal,2,1,CCCCCCCO,1.0,,,1.5040438242310896 dimensionless,0.08844740651641034 dimensionless,,,,,,,0.8100797709695255 gram / milliliter,0.0003506336469180925 gram / milliliter
+106,298.15 kelvin,101.0 kilopascal,2,2,c1ccccc1,0.772,CCCCCCCl,0.228,,,,,5.053750803890665e-07 meter ** 3 / mole,1.937094599713899e-08 meter ** 3 / mole,,,,
+107,298.15 kelvin,101.0 kilopascal,2,2,c1ccccc1,0.7352,CCCCCCCl,0.26480000000000004,,,,,,,293.2259510152071 kilogram * meter ** 2 / mole / second ** 2,17.781826025103285 kilogram * meter ** 2 / mole / second ** 2,,
+108,298.15 kelvin,101.0 kilopascal,2,2,c1ccccc1,0.2877,CCCCCCCl,0.7122999999999999,,,,,3.928578415680092e-07 meter ** 3 / mole,1.9305181265070115e-08 meter ** 3 / mole,,,,
+109,298.15 kelvin,101.0 kilopascal,2,2,c1ccccc1,0.2862,CCCCCCCl,0.7138,,,,,,,185.41127758620132 kilogram * meter ** 2 / mole / second ** 2,17.0819558922913 kilogram * meter ** 2 / mole / second ** 2,,
+110,298.15 kelvin,101.325 kilopascal,2,1,CCCCCCCl,1.0,,,,,,,,,,,0.8479445760910674 gram / milliliter,0.0002980263041850279 gram / milliliter
+111,298.15 kelvin,100.0 kilopascal,2,1,CCCCCCO,1.0,,,5.3463974895483455 dimensionless,0.9380144853834471 dimensionless,,,,,,,0.8053871901850524 gram / milliliter,0.0002646994185041582 gram / milliliter
+112,298.15 kelvin,101.325 kilopascal,2,1,CCCCCO,1.0,,,3.418757845266078 dimensionless,0.723875582183582 dimensionless,,,,,,,0.801489978939987 gram / milliliter,0.00036263275241097634 gram / milliliter
+113,298.15 kelvin,101.325 kilopascal,2,1,CCCCOC(=O)C,1.0,,,,,,,,,,,0.884980609554715 gram / milliliter,0.0002866397224465628 gram / milliliter
+114,298.15 kelvin,101.325 kilopascal,2,1,CCCCOC=O,1.0,,,,,,,,,,,0.9135536197605371 gram / milliliter,0.0002789879672675857 gram / milliliter
+115,298.15 kelvin,101.0 kilopascal,2,1,CCCCO,1.0,,,7.783707011401483 dimensionless,1.324012734371404 dimensionless,,,,,,,0.7964465602726232 gram / milliliter,0.0002477003811062557 gram / milliliter
+116,318.15 kelvin,101.3 kilopascal,2,2,O,0.997504,CCCOC(=O)C,0.002496,,,,,,,31.40367869446709 kilogram * meter ** 2 / mole / second ** 2,13.81535942433919 kilogram * meter ** 2 / mole / second ** 2,,
+117,298.15 kelvin,101.325 kilopascal,2,1,CCCOC(=O)C,1.0,,,,,,,,,,,0.8957474878271692 gram / milliliter,0.00028076900337959765 gram / milliliter
+118,298.15 kelvin,101.0 kilopascal,2,1,CCCOCCO,1.0,,,4.755778762735597 dimensionless,0.5279217396034445 dimensionless,,,,,,,0.906881116722347 gram / milliliter,0.0002780082653354337 gram / milliliter
+119,300.15 kelvin,101.325 kilopascal,2,1,CCCO,1.0,,,7.0538683508934925 dimensionless,0.8028581043498815 dimensionless,,,,,,,0.7904101652944305 gram / milliliter,0.0003097550928352563 gram / milliliter
+120,298.15 kelvin,101.325 kilopascal,6,1,CCOC(=O)c1cccs1,1.0,,,,,69044.08846712246 kilogram * meter ** 2 / mole / second ** 2,203.3019284598805 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+121,303.15 kelvin,101.325 kilopascal,2,1,CCO,1.0,,,12.915048649470616 dimensionless,1.133431395376534 dimensionless,,,,,,,0.7805242475989351 gram / milliliter,0.00025738442158166686 gram / milliliter
+122,298.15 kelvin,101.325 kilopascal,6,1,CCc1ccc(s1)C=O,1.0,,,,,58730.784056982455 kilogram * meter ** 2 / mole / second ** 2,267.97275351744497 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+123,303.15 kelvin,101.325 kilopascal,2,1,CN(C)C=O,1.0,,,25.33285603747477 dimensionless,1.4509159915742151 dimensionless,,,,,,,0.9644972979433508 gram / milliliter,0.00016686179108086935 gram / milliliter
+124,303.15 kelvin,101.325 kilopascal,2,1,CN(C)CCO,1.0,,,14.642175751564675 dimensionless,1.0722875034124855 dimensionless,,,,,,,0.9151106022657411 gram / milliliter,0.0001680739235252552 gram / milliliter
+125,303.15 kelvin,101.325 kilopascal,2,1,CN(CCO)CCO,1.0,,,4.4300045904447956 dimensionless,0.6303331574860018 dimensionless,,,,,,,1.0580653500119779 gram / milliliter,0.00031795690834259845 gram / milliliter
+126,298.15 kelvin,101.0 kilopascal,2,2,CN1CCCCC1,0.004409000000000001,O,0.995591,,,,,,,-28.711799134318426 kilogram * meter ** 2 / mole / second ** 2,14.882276519410375 kilogram * meter ** 2 / mole / second ** 2,,
+127,298.15 kelvin,101.0 kilopascal,2,2,CN1CCCCC1,0.2452,O,0.7548,,,,,-2.604316645170456e-07 meter ** 3 / mole,1.6268539954633766e-08 meter ** 3 / mole,,,,
+128,308.15 kelvin,101.0 kilopascal,2,2,CN1CCCCC1,0.78,O,0.22,,,,,-2.2304179395845898e-07 meter ** 3 / mole,1.55660041892533e-08 meter ** 3 / mole,,,,
+129,298.15 kelvin,101.325 kilopascal,2,1,CN1CCCCC1,1.0,,,,,,,,,,,0.8531968691292909 gram / milliliter,0.00021525696473151054 gram / milliliter
+130,298.15 kelvin,101.325 kilopascal,2,1,COC=O,1.0,,,,,,,,,,,1.0348126610217794 gram / milliliter,0.0004077126084556844 gram / milliliter
+131,298.15 kelvin,101.325 kilopascal,6,1,COc1cccc(c1)O,1.0,,,,,74076.77493215029 kilogram * meter ** 2 / mole / second ** 2,294.0821999346596 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+132,298.15 kelvin,101.325 kilopascal,6,1,COc1cccc(c1OC)O,1.0,,,,,77602.25847163345 kilogram * meter ** 2 / mole / second ** 2,235.68495195594582 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+133,298.15 kelvin,101.325 kilopascal,6,1,COc1ccccn1,1.0,,,,,53028.9828655095 kilogram * meter ** 2 / mole / second ** 2,237.96591619946145 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+134,298.15 kelvin,101.325 kilopascal,6,1,COc1ccncc1,1.0,,,,,58952.70030675142 kilogram * meter ** 2 / mole / second ** 2,234.9055222914846 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+135,298.15 kelvin,101.0 kilopascal,2,2,CO,0.2,O,0.8,,,,,,,85.69523819379538 kilogram * meter ** 2 / mole / second ** 2,15.154312720703535 kilogram * meter ** 2 / mole / second ** 2,,
+136,298.15 kelvin,100.0 kilopascal,2,2,O,0.75,CO,0.25,,,,,-2.0128629508482784e-07 meter ** 3 / mole,1.4369551808690897e-08 meter ** 3 / mole,,,,
+137,298.15 kelvin,100.0 kilopascal,2,2,O,0.25,CO,0.75,,,,,-1.5473468950135322e-07 meter ** 3 / mole,1.4651751359660592e-08 meter ** 3 / mole,,,,
+138,298.15 kelvin,101.0 kilopascal,2,2,CO,0.8,O,0.2,,,,,,,-5.854018691009969 kilogram * meter ** 2 / mole / second ** 2,16.284624397477625 kilogram * meter ** 2 / mole / second ** 2,,
+139,298.15 kelvin,101.0 kilopascal,2,1,CO,1.0,,,17.18945172994167 dimensionless,1.020689513035134 dimensionless,,,,,,,0.7813602635907899 gram / milliliter,0.00036343943117081635 gram / milliliter
+140,303.15 kelvin,101.0 kilopascal,2,1,CS(=O)C,1.0,,,52.970851190251686 dimensionless,1.446731825549042 dimensionless,,,,,,,1.0869080533923263 gram / milliliter,8.775155813318434e-05 gram / milliliter
+141,303.15 kelvin,101.325 kilopascal,2,1,CSSC,1.0,,,,,,,,,,,0.993402455706838 gram / milliliter,0.00033045827231964806 gram / milliliter
+142,298.15 kelvin,101.325 kilopascal,6,1,Cc1cc(sc1)C(=O)C,1.0,,,,,63958.79128229245 kilogram * meter ** 2 / mole / second ** 2,192.9255785928802 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+143,298.15 kelvin,101.325 kilopascal,6,1,Cc1ccc(s1)C=O,1.0,,,,,54059.6628251005 kilogram * meter ** 2 / mole / second ** 2,247.08511183313786 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+144,298.15 kelvin,101.0 kilopascal,2,2,Cc1cccc(n1)C,0.004618,O,0.995382,,,,,,,-8.580392665266118 kilogram * meter ** 2 / mole / second ** 2,11.871256716234084 kilogram * meter ** 2 / mole / second ** 2,,
+145,298.15 kelvin,101.325 kilopascal,2,1,Cc1cccc(n1)C,1.0,,,,,,,,,,,0.9132045109877264 gram / milliliter,0.00023194842850447544 gram / milliliter
+146,298.15 kelvin,101.0 kilopascal,2,2,Cc1ccccc1N,0.2374,c1ccncc1,0.7626,,,,,-3.1033473565416833e-07 meter ** 3 / mole,1.8912426322383067e-08 meter ** 3 / mole,,,,
+147,298.15 kelvin,101.0 kilopascal,2,2,Cc1ccccc1N,0.2655,Cc1ccncc1,0.7344999999999999,,,,,-3.721599833265835e-07 meter ** 3 / mole,1.767017103452078e-08 meter ** 3 / mole,,,,
+148,308.15 kelvin,101.0 kilopascal,2,2,Cc1ccccc1N,0.2681,c1ccncc1,0.7319,,,,,,,-1321.6523829746584 kilogram * meter ** 2 / mole / second ** 2,18.633551548089425 kilogram * meter ** 2 / mole / second ** 2,,
+149,308.15 kelvin,101.0 kilopascal,2,2,Cc1ccccc1N,0.2715,Cc1ccncc1,0.7284999999999999,,,,,,,-1239.355791297734 kilogram * meter ** 2 / mole / second ** 2,17.64173333307489 kilogram * meter ** 2 / mole / second ** 2,,
+150,298.15 kelvin,101.0 kilopascal,2,2,Cc1ccccc1N,0.7674,Cc1ccncc1,0.2326000000000001,,,,,-2.2707365121183462e-07 meter ** 3 / mole,1.7272849965985867e-08 meter ** 3 / mole,,,,
+151,298.15 kelvin,101.0 kilopascal,2,2,Cc1ccccc1N,0.7678,c1ccncc1,0.2322,,,,,-2.8918484434010765e-07 meter ** 3 / mole,1.763807947827119e-08 meter ** 3 / mole,,,,
+152,308.15 kelvin,101.0 kilopascal,2,2,Cc1ccccc1N,0.7827,Cc1ccncc1,0.21730000000000005,,,,,,,-856.9104544281727 kilogram * meter ** 2 / mole / second ** 2,16.45629426543825 kilogram * meter ** 2 / mole / second ** 2,,
+153,298.15 kelvin,101.325 kilopascal,2,1,Cc1ccccc1N,1.0,,,,,,,,,,,1.00755946826808 gram / milliliter,0.0003575107294403182 gram / milliliter
+154,298.15 kelvin,101.0 kilopascal,2,2,Cc1cccnc1,0.005509,O,0.994491,,,,,,,12.060944524106162 kilogram * meter ** 2 / mole / second ** 2,14.231146361041553 kilogram * meter ** 2 / mole / second ** 2,,
+155,298.15 kelvin,101.325 kilopascal,2,1,Cc1cccnc1,1.0,,,,,,,,,,,0.9349541098706797 gram / milliliter,0.0003039826312428909 gram / milliliter
+156,298.15 kelvin,101.0 kilopascal,2,2,Cc1ccncc1,0.005492,O,0.994508,,,,,,,26.965880531635776 kilogram * meter ** 2 / mole / second ** 2,12.737029780281626 kilogram * meter ** 2 / mole / second ** 2,,
+157,298.15 kelvin,101.325 kilopascal,2,1,Cc1ccncc1,1.0,,,,,,,,,,,0.9384517891130766 gram / milliliter,0.000292930645047056 gram / milliliter
+158,298.15 kelvin,101.325 kilopascal,6,1,Cc1ccsc1C#N,1.0,,,,,58789.72209572964 kilogram * meter ** 2 / mole / second ** 2,234.59897936357038 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+159,298.15 kelvin,101.325 kilopascal,6,1,Cc1ccsc1C(=O)C,1.0,,,,,61644.832304284755 kilogram * meter ** 2 / mole / second ** 2,205.3832227132614 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+160,298.15 kelvin,101.325 kilopascal,6,1,Cc1ccsc1C=O,1.0,,,,,59160.78162535844 kilogram * meter ** 2 / mole / second ** 2,160.88992040542013 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+161,298.15 kelvin,101.325 kilopascal,6,1,Cn1cccc1C(=O)OC,1.0,,,,,71536.29308486672 kilogram * meter ** 2 / mole / second ** 2,300.5271429023709 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+162,298.15 kelvin,101.0 kilopascal,2,2,Cn1ccnc1,0.006766,O,0.993234,,,,,,,-25.356773737254116 kilogram * meter ** 2 / mole / second ** 2,14.087833075226046 kilogram * meter ** 2 / mole / second ** 2,,
+163,298.15 kelvin,101.325 kilopascal,2,1,Cn1ccnc1,1.0,,,,,,,,,,,1.047868821712645 gram / milliliter,0.0002725687040726697 gram / milliliter
+164,297.15 kelvin,101.0 kilopascal,2,2,c1ccncc1,0.75,O,0.25,,,,,,,161.26925944674076 kilogram * meter ** 2 / mole / second ** 2,15.54356894288533 kilogram * meter ** 2 / mole / second ** 2,,
+165,297.15 kelvin,101.0 kilopascal,2,2,c1ccncc1,0.27,O,0.73,,,,,,,59.63330066711569 kilogram * meter ** 2 / mole / second ** 2,16.24411953923829 kilogram * meter ** 2 / mole / second ** 2,,
+166,296.3 kelvin,101.325 kilopascal,2,1,c1c(cc(c(c1F)F)F)F,1.0,,,,,,,,,,,1.251791740408127 gram / milliliter,0.0004307197432103682 gram / milliliter
+167,298.15 kelvin,101.325 kilopascal,2,1,c1cc(cc(c1)Br)Cl,1.0,,,,,,,,,,,1.6071368966178108 gram / milliliter,0.00041084618181163246 gram / milliliter
+168,298.15 kelvin,101.325 kilopascal,6,1,c1cc(cc(c1)Cl)F,1.0,,,,,38525.40520039717 kilogram * meter ** 2 / mole / second ** 2,231.79470244987155 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+169,296.1 kelvin,101.325 kilopascal,2,1,c1cc(ccc1F)F,1.0,,,,,,,,,,,1.0694207703499754 gram / milliliter,0.00043970367589385526 gram / milliliter
+170,298.15 kelvin,101.325 kilopascal,6,1,c1cc(sc1)CC#N,1.0,,,,,63626.31910652445 kilogram * meter ** 2 / mole / second ** 2,166.26613462884313 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+171,298.15 kelvin,101.325 kilopascal,2,1,c1cc[nH]c1,1.0,,,,,,,,,,,0.9928895611077514 gram / milliliter,0.0003744492091861465 gram / milliliter
+172,298.15 kelvin,101.325 kilopascal,2,1,c1ccc(c(c1)Cl)Br,1.0,,,,,,,,,,,1.6211658713435877 gram / milliliter,0.00044311573577601157 gram / milliliter
+173,298.15 kelvin,101.325 kilopascal,6,1,c1ccc(c(c1)F)Br,1.0,,,,,45950.38980155151 kilogram * meter ** 2 / mole / second ** 2,176.5179201113977 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+174,298.15 kelvin,101.325 kilopascal,6,1,c1ccc(c(c1)F)Cl,1.0,,,,,40750.59488097776 kilogram * meter ** 2 / mole / second ** 2,221.70321209111347 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+175,298.15 kelvin,101.325 kilopascal,2,1,c1ccc2c(c1)ccs2,1.0,,,,,,,,,,,1.1428335210991567 gram / milliliter,0.000328889760151885 gram / milliliter
+176,298.15 kelvin,101.325 kilopascal,2,1,c1ccccc1,1.0,,,,,,,,,,,0.8507539548899049 gram / milliliter,0.0003934666904154261 gram / milliliter
+177,298.0 kelvin,101.325 kilopascal,6,1,c1ccccc1,1.0,,,,,31574.502767543196 kilogram * meter ** 2 / mole / second ** 2,156.24765850082193 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+178,298.15 kelvin,101.325 kilopascal,2,1,c1ccncc1,1.0,,,,,,,,,,,0.9759382784267955 gram / milliliter,0.0003209504344055141 gram / milliliter
+179,293.15 kelvin,101.325 kilopascal,2,1,c1ccoc1,1.0,,,,,,,,,,,0.9573003167111303 gram / milliliter,0.0003087794196116379 gram / milliliter
+180,298.15 kelvin,101.325 kilopascal,6,1,c1coc2c1C(=O)CCC2,1.0,,,,,70980.46796115121 kilogram * meter ** 2 / mole / second ** 2,279.01555882868684 kilogram * meter ** 2 / mole / second ** 2,,,,,,
+181,298.15 kelvin,101.325 kilopascal,6,1,c1cscc1CC#N,1.0,,,,,64395.30542722582 kilogram * meter ** 2 / mole / second ** 2,173.04506917028525 kilogram * meter ** 2 / mole / second ** 2,,,,,,

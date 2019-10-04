@@ -72,12 +72,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.585714475403459e-08
+          "value": 1.8089505716950183e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -1.5452693276150193e-07
+          "value": 1.2468391956730164e-08
         }
       }
     ],
@@ -152,12 +152,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.820389460814267e-08
+          "value": 1.84080221326062e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -1.8713207522615257e-07
+          "value": 4.674073576565931e-08
         }
       }
     ],
@@ -214,12 +214,74 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00042660578458442644
+          "value": 0.00039340158873338153
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.3970011613815096
+          "value": 1.3533542217271226
+        }
+      }
+    ],
+    "C(=C(F)F)(C(F)(F)F)F{1.000000}": [
+      {
+        "@type": "propertyestimator.properties.density.Density",
+        "gradients": [],
+        "id": "acd8823e-a58f-4290-ad98-9901e1f1ffce",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C(=C(F)F)(C(F)(F)F)F": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C(=C(F)F)(C(F)(F)F)F",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C(=C(F)F)(C(F)(F)F)F"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 100.4
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 303.28
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 0.00042752265240317397
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 1.1852292550996273
         }
       }
     ],
@@ -276,12 +338,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0003167530462363944
+          "value": 0.00038759750133736143
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.556202454244752
+          "value": 1.5717196985412756
         }
       }
     ],
@@ -338,12 +400,194 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00040265158766438863
+          "value": 0.0003877036058921533
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 3.057024081497077
+          "value": 2.3769065438628414
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.density.Density",
+        "gradients": [],
+        "id": "37c63837-b5bc-4660-8ee4-e20ce929d9f4",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C(C(Br)Br)(Br)Br": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C(C(Br)Br)(Br)Br",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C(C(Br)Br)(Br)Br"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 293.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 0.00038745150422104824
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 2.37642290182117
+        }
+      }
+    ],
+    "C(C(C(C(C(F)(F)Br)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F{1.000000}": [
+      {
+        "@type": "propertyestimator.properties.density.Density",
+        "gradients": [],
+        "id": "a8f6fca2-ccb4-4752-8c82-b2b95e1e068d",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C(C(C(C(C(F)(F)Br)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C(C(C(C(C(F)(F)Br)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C(C(C(C(C(F)(F)Br)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.325
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 0.0004496162462454582
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 1.9133128318431176
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.density.Density",
+        "gradients": [],
+        "id": "a8f6fca2-ccb4-4752-8c82-b2b95e1e068d",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C(C(C(C(C(F)(F)Br)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C(C(C(C(C(F)(F)Br)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C(C(C(C(C(F)(F)Br)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.325
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 0.0004467804445689011
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 1.8841340350031703
         }
       }
     ],
@@ -418,12 +662,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.8258547042389462e-08
+          "value": 1.5017478529850467e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 8.425261079569057e-07
+          "value": -4.707542606374553e-07
         }
       }
     ],
@@ -498,12 +742,90 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.6531587702155432e-08
+          "value": 1.4808543561939513e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 3.322464016600852e-07
+          "value": -2.22531732962998e-07
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.density.ExcessMolarVolume",
+        "gradients": [],
+        "id": "14940802-b563-46b0-86bc-6a4e2c016549",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C(C(F)(F)F)(C(F)(F)F)O": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.8065
+                }
+              ]
+            },
+            "O": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.1935
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C(C(F)(F)F)(C(F)(F)F)O",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C(C(F)(F)F)(C(F)(F)F)O"
+            },
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "O",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "O"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "meter ** 3 / mole",
+          "value": 1.557725209806917e-08
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "meter ** 3 / mole",
+          "value": -1.2249923232187407e-07
         }
       }
     ],
@@ -560,12 +882,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0004301299150627685
+          "value": 0.0003464729101230345
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.635111235015493
+          "value": 1.560589142397428
         }
       }
     ],
@@ -622,12 +944,72 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0003523483044974044
+          "value": 0.00042443680987698426
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.2125534920872718
+          "value": 1.179911092289482
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.density.Density",
+        "gradients": [],
+        "id": "9111b26a-a5e2-4b38-a2e8-d9c4cbbec88d",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C(C(F)(F)F)F": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C(C(F)(F)F)F",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C(C(F)(F)F)F"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 100.049
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 293.2195
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 0.0004166905988749904
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 1.1793832180130777
         }
       }
     ],
@@ -702,12 +1084,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 16.749137701560045
+          "value": 17.535701960737164
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -429.30362145620893
+          "value": -355.8004445825354
         }
       }
     ],
@@ -782,12 +1164,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 19.33876165068466
+          "value": 15.50726286718302
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -2931.5191076983174
+          "value": -1603.68190972734
         }
       }
     ],
@@ -862,12 +1244,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 18.711396906301598
+          "value": 17.251822200409183
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -432.54936025931966
+          "value": -498.32025846541364
         }
       }
     ],
@@ -942,12 +1324,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 17.879040053105655
+          "value": 18.195929561938755
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 509.03473916629446
+          "value": 404.80391580306787
         }
       }
     ],
@@ -1022,12 +1404,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 16.870916284673328
+          "value": 17.53428936782881
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -519.7534332889336
+          "value": -523.9035272366309
         }
       }
     ],
@@ -1102,12 +1484,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 16.313739674327156
+          "value": 16.540803981714486
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 144.20509275661607
+          "value": 677.3301723195909
         }
       }
     ],
@@ -1182,12 +1564,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 17.833600796915803
+          "value": 17.03101366485899
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -305.44519000742
+          "value": -460.3526101127936
         }
       }
     ],
@@ -1262,12 +1644,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 16.706798182921435
+          "value": 17.23619531531199
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -2585.792092748263
+          "value": -1370.2895069767546
         }
       }
     ],
@@ -1342,12 +1724,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 16.35237081079487
+          "value": 16.700443771991438
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -262.58387772963033
+          "value": -314.94476015563123
         }
       }
     ],
@@ -1422,12 +1804,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 16.827187273507462
+          "value": 16.20254987554134
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -187.13563239415816
+          "value": -142.12512924942712
         }
       }
     ],
@@ -1484,12 +1866,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00040709867357425865
+          "value": 0.0003836318223641503
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.3683239359939503
+          "value": 1.3488182368333752
         }
       }
     ],
@@ -1564,12 +1946,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 17.6712882609108
+          "value": 16.836116573890635
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -222.10387184200226
+          "value": -814.7074758925482
         }
       }
     ],
@@ -1644,12 +2026,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.7642256628817582e-08
+          "value": 1.7814393916914068e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -2.0355544022565824e-07
+          "value": -5.011216375686164e-07
         }
       }
     ],
@@ -1724,12 +2106,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.89753682238348e-08
+          "value": 1.903755432608662e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -3.254688114736178e-07
+          "value": -5.935384477618135e-07
         }
       }
     ],
@@ -1804,12 +2186,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 18.521394965028023
+          "value": 17.087900875224527
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -144.2090466994996
+          "value": -666.4453542610281
         }
       }
     ],
@@ -1884,12 +2266,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.8460984784675927e-08
+          "value": 1.725775270564889e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -3.649106088766859e-07
+          "value": -6.821077944663779e-07
         }
       },
       {
@@ -1962,12 +2344,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 17.304452630008086
+          "value": 17.575298709859542
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -92.51515007756097
+          "value": -481.48072559303546
         }
       }
     ],
@@ -2042,12 +2424,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.8977513552380076e-08
+          "value": 1.8019092078474575e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -2.9556379152535675e-07
+          "value": -6.341194708384492e-07
         }
       }
     ],
@@ -2122,12 +2504,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 17.187159307371402
+          "value": 18.722866590217716
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -278.9000136492068
+          "value": -814.1767931075992
         }
       }
     ],
@@ -2184,12 +2566,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0004344891812939971
+          "value": 0.0004128789738640619
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 2.120487569111219
+          "value": 1.8377623165013284
         }
       }
     ],
@@ -2246,12 +2628,72 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00043434346399544494
+          "value": 0.0004217801440777047
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.6442491714443561
+          "value": 1.549082163353039
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.density.Density",
+        "gradients": [],
+        "id": "856743a2-229a-48d8-aa36-c6a1894340ba",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C(CBr)Cl": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C(CBr)Cl",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C(CBr)Cl"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.325
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 0.000372164463276184
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 1.5506298980668873
         }
       }
     ],
@@ -2308,12 +2750,72 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00036253253597300767
+          "value": 0.00041695103121325874
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.4631225689576688
+          "value": 1.3726421517180059
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.density.Density",
+        "gradients": [],
+        "id": "c7029aad-01d9-4bfa-8452-8274b2cb5509",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C(CCBr)CCl": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C(CCBr)CCl",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C(CCBr)CCl"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.325
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 0.00043564452606205357
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 1.3727598164087549
         }
       }
     ],
@@ -2388,12 +2890,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.6924962293127033e-08
+          "value": 1.2314156826075672e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -6.418772885128813e-08
+          "value": -3.372194750573945e-07
         }
       }
     ],
@@ -2468,12 +2970,250 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 17.562451502044254
+          "value": 17.447986924470833
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 556.7727301155519
+          "value": 61.513524053145375
+        }
+      }
+    ],
+    "C(CCO)CO{0.770300}|O{0.229700}": [
+      {
+        "@type": "propertyestimator.properties.density.ExcessMolarVolume",
+        "gradients": [],
+        "id": "054f9540-7b5e-4035-af65-4769a0ba1b98",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C(CCO)CO": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.7703
+                }
+              ]
+            },
+            "O": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.2297
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "O",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "O"
+            },
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C(CCO)CO",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C(CCO)CO"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "meter ** 3 / mole",
+          "value": 1.590911622238673e-08
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "meter ** 3 / mole",
+          "value": -2.313304372661369e-07
+        }
+      }
+    ],
+    "C(CCO)CO{0.794700}|O{0.205300}": [
+      {
+        "@type": "propertyestimator.properties.enthalpy.EnthalpyOfMixing",
+        "gradients": [],
+        "id": "8121577b-2eb7-47af-8100-46d139ae8a84",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C(CCO)CO": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.7947
+                }
+              ]
+            },
+            "O": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.20530000000000004
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C(CCO)CO",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C(CCO)CO"
+            },
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "O",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "O"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 16.377075514869926
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": -158.03017808604272
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.enthalpy.EnthalpyOfMixing",
+        "gradients": [],
+        "id": "8121577b-2eb7-47af-8100-46d139ae8a84",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C(CCO)CO": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.7947
+                }
+              ]
+            },
+            "O": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.20530000000000004
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C(CCO)CO",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C(CCO)CO"
+            },
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "O",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "O"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 16.551686854874024
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": -114.50419395838253
         }
       }
     ],
@@ -2530,12 +3270,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 293.1931762287391
+          "value": 269.9723927545783
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 79665.5947605494
+          "value": 81099.16666096152
         }
       },
       {
@@ -2590,12 +3330,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0003877944371531697
+          "value": 0.000374471893615552
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.022200909626025
+          "value": 1.0270094453705436
         }
       }
     ],
@@ -2652,12 +3392,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0004274072964004174
+          "value": 0.000351560689667053
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.538935943653701
+          "value": 1.4446041386401258
         }
       }
     ],
@@ -2732,12 +3472,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 13.863747415207115
+          "value": 18.73509662274298
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 608.3693129411113
+          "value": 27.50821485628694
         }
       }
     ],
@@ -2812,12 +3552,170 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.5812016952502196e-08
+          "value": 1.4140286100542192e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -1.5362382658662318e-07
+          "value": -2.620121844963066e-07
+        }
+      }
+    ],
+    "C(CO)CO{0.743000}|O{0.257000}": [
+      {
+        "@type": "propertyestimator.properties.enthalpy.EnthalpyOfMixing",
+        "gradients": [],
+        "id": "d22afbd8-91d7-480f-9b12-10a59fe10489",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C(CO)CO": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.743
+                }
+              ]
+            },
+            "O": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.257
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C(CO)CO",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C(CO)CO"
+            },
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "O",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "O"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 14.851931714075787
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": -11.797622547936044
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.enthalpy.EnthalpyOfMixing",
+        "gradients": [],
+        "id": "d22afbd8-91d7-480f-9b12-10a59fe10489",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C(CO)CO": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.743
+                }
+              ]
+            },
+            "O": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.257
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C(CO)CO",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C(CO)CO"
+            },
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "O",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "O"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 16.416693702933507
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": -18.80564737120585
         }
       }
     ],
@@ -2892,12 +3790,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.6049690274469875e-08
+          "value": 1.5127970678681372e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -1.0804866859045862e-07
+          "value": -1.9069215051188937e-07
         }
       }
     ],
@@ -2954,12 +3852,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 236.18830940852658
+          "value": 232.94178177385848
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 75566.60572363628
+          "value": 74196.5142078578
         }
       },
       {
@@ -3014,12 +3912,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00031434329038659034
+          "value": 0.0003379913634592172
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.0350327883869115
+          "value": 1.0651639251274438
         }
       }
     ],
@@ -3076,12 +3974,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0002855128293082442
+          "value": 0.00024595193709346744
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.0592357515379431
+          "value": 1.161272140181015
         }
       },
       {
@@ -3136,12 +4034,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.27915625468366684
+          "value": 1.1757644672749448
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 1.7882538219603457
+          "value": 4.735520887901599
         }
       }
     ],
@@ -3198,12 +4096,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.000423597083243224
+          "value": 0.00038745314444559807
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.0284665161657542
+          "value": 1.1336490683376215
         }
       },
       {
@@ -3258,12 +4156,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 1.1006701744658571
+          "value": 0.7301448516651093
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 6.243255262989203
+          "value": 3.321151513781292
         }
       }
     ],
@@ -3320,12 +4218,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00030794514300252297
+          "value": 0.0002909952079562082
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9461813586439696
+          "value": 1.069684031254095
         }
       },
       {
@@ -3380,12 +4278,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 1.467577593165454
+          "value": 1.3381140727083998
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 14.11853207245692
+          "value": 13.691242723199915
         }
       }
     ],
@@ -3460,12 +4358,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 17.592331494768203
+          "value": 15.543260235094486
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 329.07960587575053
+          "value": -20.016016293760913
         }
       }
     ],
@@ -3540,12 +4438,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.700422321254261e-08
+          "value": 1.2727869401284934e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -2.3963131894792696e-07
+          "value": -2.4158304226762985e-07
         }
       }
     ],
@@ -3620,12 +4518,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.5701761497922856e-08
+          "value": 1.3015978061866603e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -1.8858284161356027e-07
+          "value": -6.970319436694811e-08
         }
       }
     ],
@@ -3700,12 +4598,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 15.106925149626806
+          "value": 16.603847997809623
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 154.45475037317374
+          "value": -0.9765071691217599
         }
       }
     ],
@@ -3762,12 +4660,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 196.25702524917054
+          "value": 218.85206107231502
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 63115.79626151914
+          "value": 61264.39349271776
         }
       },
       {
@@ -3822,12 +4720,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0004231662287254835
+          "value": 0.0003447826853150376
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.0538034855005158
+          "value": 1.1268202520964798
         }
       },
       {
@@ -3882,12 +4780,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00013676478530247907
+          "value": 0.00016583325777423509
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.050828567492451
+          "value": 1.1215666956104917
         }
       },
       {
@@ -3942,12 +4840,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 1.4195949713720604
+          "value": 1.4461835454817118
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 19.56071779222855
+          "value": 22.595106350541244
         }
       }
     ],
@@ -4022,12 +4920,170 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 15.502148424089437
+          "value": 14.377285667871593
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -177.26464391362242
+          "value": -88.55846967494654
+        }
+      }
+    ],
+    "C(COCCO)O{0.790600}|O{0.209400}": [
+      {
+        "@type": "propertyestimator.properties.enthalpy.EnthalpyOfMixing",
+        "gradients": [],
+        "id": "a4ce487c-7d76-4b14-9107-c5f4da5bbcd9",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C(COCCO)O": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.7906
+                }
+              ]
+            },
+            "O": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.2094
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C(COCCO)O",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C(COCCO)O"
+            },
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "O",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "O"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 16.69939703815113
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 102.6820399503631
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.enthalpy.EnthalpyOfMixing",
+        "gradients": [],
+        "id": "a4ce487c-7d76-4b14-9107-c5f4da5bbcd9",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C(COCCO)O": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.7906
+                }
+              ]
+            },
+            "O": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.2094
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C(COCCO)O",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C(COCCO)O"
+            },
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "O",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "O"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 16.273890135276556
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 131.24027599787223
         }
       }
     ],
@@ -4084,12 +5140,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00027490901637901657
+          "value": 0.00013258543959129477
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.0576731962031263
+          "value": 1.1500101201076192
         }
       },
       {
@@ -4144,12 +5200,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.5417432461427224
+          "value": 1.1067244317281004
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 3.515418094132889
+          "value": 12.78403442878495
         }
       }
     ],
@@ -4206,12 +5262,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00031761194577524445
+          "value": 0.0002328451340684318
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.0554209886240076
+          "value": 1.1575625817517263
         }
       },
       {
@@ -4266,12 +5322,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.730959725884972
+          "value": 1.3112665527475134
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 5.8744419161024855
+          "value": 4.996050785509269
         }
       }
     ],
@@ -4328,12 +5384,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0004331507661884835
+          "value": 0.0004133181246678099
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 2.0495594776627253
+          "value": 1.8594857814272647
         }
       }
     ],
@@ -4408,12 +5464,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 15.888042338249724
+          "value": 17.055618586170347
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 710.993475885426
+          "value": 757.785698662452
         }
       }
     ],
@@ -4488,12 +5544,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 16.781061404237676
+          "value": 16.099945313193896
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 972.7061942531777
+          "value": 968.3704763120882
         }
       }
     ],
@@ -4550,12 +5606,134 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00044770405563787836
+          "value": 0.00036009537911653455
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.623870857459818
+          "value": 1.5808435378056311
+        }
+      }
+    ],
+    "C/C=C/C=C/COC(=O)C{1.000000}": [
+      {
+        "@type": "propertyestimator.properties.enthalpy.EnthalpyOfVaporization",
+        "gradients": [],
+        "id": "c6f2897a-fc41-4c37-a21b-3b7b50064e23",
+        "metadata": {},
+        "phase": 6,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C/C=C/C=C/COC(=O)C": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C/C=C/C=C/COC(=O)C",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C/C=C/C=C/COC(=O)C"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "atmosphere",
+            "value": 1.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 235.05743307248528
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 63579.12813478248
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.enthalpy.EnthalpyOfVaporization",
+        "gradients": [],
+        "id": "c6f2897a-fc41-4c37-a21b-3b7b50064e23",
+        "metadata": {},
+        "phase": 6,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C/C=C/C=C/COC(=O)C": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C/C=C/C=C/COC(=O)C",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C/C=C/C=C/COC(=O)C"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "atmosphere",
+            "value": 1.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 316.0052806405404
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 64716.46144514983
         }
       }
     ],
@@ -4612,12 +5790,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00012655509250802217
+          "value": 0.00011900197232148184
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.1058431579891257
+          "value": 1.1353857309466062
         }
       },
       {
@@ -4672,12 +5850,132 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 1.4994008180405478
+          "value": 1.408129857028451
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 32.79181847120957
+          "value": 27.749093547425723
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.density.Density",
+        "gradients": [],
+        "id": "9eab006e-aa1c-41a1-b704-818b463decf2",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C1CC(=O)OC1": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C1CC(=O)OC1",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C1CC(=O)OC1"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 7.22457919823533e-05
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 1.1353272987278695
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.dielectric.DielectricConstant",
+        "gradients": [],
+        "id": "c10c5b0c-dcc2-4453-b041-2571c2d9935a",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C1CC(=O)OC1": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C1CC(=O)OC1",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C1CC(=O)OC1"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "dimensionless",
+          "value": 1.287431042423774
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "dimensionless",
+          "value": 35.19521824630509
         }
       }
     ],
@@ -4734,12 +6032,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00035337024363706055
+          "value": 0.0002941204997746161
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9526863898873995
+          "value": 0.9289838325694383
         }
       },
       {
@@ -4794,12 +6092,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.5546908877258636
+          "value": 0.7573026903755422
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 9.563879166935415
+          "value": 8.640802094777868
         }
       }
     ],
@@ -4874,12 +6172,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 18.23686071053862
+          "value": 16.2171358760791
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 200.3104624717962
+          "value": 471.447778316171
         }
       }
     ],
@@ -4954,12 +6252,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.681775629527644e-08
+          "value": 1.684578826027191e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -1.7458738195858534e-07
+          "value": 2.2964037460904e-07
         }
       }
     ],
@@ -5034,12 +6332,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 17.874188406760386
+          "value": 17.11427820472971
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 179.45746497310756
+          "value": 523.8692983614819
         }
       }
     ],
@@ -5114,12 +6412,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.5954532417695083e-08
+          "value": 1.5453368902670215e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -1.2743268641433382e-07
+          "value": 1.91609764332016e-07
         }
       }
     ],
@@ -5176,12 +6474,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00040324502364102245
+          "value": 0.0003166676660143819
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9589318344662494
+          "value": 0.9313653152076794
         }
       },
       {
@@ -5236,12 +6534,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.819681243513914
+          "value": 0.8565161560672441
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 10.42973846162133
+          "value": 8.693378282461804
         }
       }
     ],
@@ -5298,12 +6596,254 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0004192462808312261
+          "value": 0.00026479093198816486
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8767756705352004
+          "value": 0.9028792903557478
+        }
+      }
+    ],
+    "C1CCS(=O)(=O)C1{1.000000}": [
+      {
+        "@type": "propertyestimator.properties.density.Density",
+        "gradients": [],
+        "id": "d5866d93-dd3c-4524-a7f2-da21e4ef2d8d",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C1CCS(=O)(=O)C1": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C1CCS(=O)(=O)C1",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C1CCS(=O)(=O)C1"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 0.0001286280659562086
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 1.2943116613431016
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.dielectric.DielectricConstant",
+        "gradients": [],
+        "id": "0f34efde-8b0f-4aed-a9fd-f4b47bb531b8",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C1CCS(=O)(=O)C1": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C1CCS(=O)(=O)C1",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C1CCS(=O)(=O)C1"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "dimensionless",
+          "value": 1.4655034743224418
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "dimensionless",
+          "value": 21.443362053108576
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.density.Density",
+        "gradients": [],
+        "id": "d5866d93-dd3c-4524-a7f2-da21e4ef2d8d",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C1CCS(=O)(=O)C1": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C1CCS(=O)(=O)C1",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C1CCS(=O)(=O)C1"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 0.00013073184234118254
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 1.294143043187618
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.dielectric.DielectricConstant",
+        "gradients": [],
+        "id": "0f34efde-8b0f-4aed-a9fd-f4b47bb531b8",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "C1CCS(=O)(=O)C1": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "C1CCS(=O)(=O)C1",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "C1CCS(=O)(=O)C1"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "dimensionless",
+          "value": 1.3125033174103955
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "dimensionless",
+          "value": 9.283827407584761
         }
       }
     ],
@@ -5378,12 +6918,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 18.92898757009203
+          "value": 15.3626441534326
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -1054.4297923611302
+          "value": -1944.0438050595367
         }
       }
     ],
@@ -5458,12 +6998,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 15.37708851848832
+          "value": 16.821530118766894
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -859.9931261916354
+          "value": -1207.6373443287157
         }
       }
     ],
@@ -5520,12 +7060,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0002482846988042018
+          "value": 0.0003182534502041155
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9631824275526955
+          "value": 1.0837242440791928
         }
       }
     ],
@@ -5582,12 +7122,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00036156093630588973
+          "value": 0.000396060163648117
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8823630334896827
+          "value": 0.8631235942424803
         }
       }
     ],
@@ -5644,12 +7184,72 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0003021926226335197
+          "value": 0.0003367425635261568
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.0391542117275396
+          "value": 1.0849742446345463
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.density.Density",
+        "gradients": [],
+        "id": "5caee2a3-7a94-43c1-a052-dbd015013960",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "CC(=C)C(=O)OCCO": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "CC(=C)C(=O)OCCO",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "CC(=C)C(=O)OCCO"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.325
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 0.00031198546025750537
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 1.0846309705905322
         }
       }
     ],
@@ -5706,12 +7306,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 312.4668643291428
+          "value": 290.98019053258184
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 48924.908338691464
+          "value": 57345.130707796205
         }
       }
     ],
@@ -5768,12 +7368,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00012731640317705903
+          "value": 0.00013532049905210408
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8839586085155413
+          "value": 0.9361436890535964
         }
       },
       {
@@ -5828,12 +7428,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 1.1247322172635061
+          "value": 1.440101104815213
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 21.523131444070184
+          "value": 24.4922299960111
         }
       }
     ],
@@ -5890,12 +7490,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 328.82450625033096
+          "value": 226.99175570358108
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 71351.20544979349
+          "value": 76147.56574532276
         }
       }
     ],
@@ -5970,12 +7570,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 18.133291587327076
+          "value": 17.920888827899258
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 1512.1328362267086
+          "value": 291.80840329122293
         }
       }
     ],
@@ -6050,12 +7650,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.716811490802122e-08
+          "value": 1.7330636133073457e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 4.0009879552056163e-07
+          "value": 4.118481794824797e-07
         }
       }
     ],
@@ -6130,12 +7730,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.897839021066728e-08
+          "value": 1.687905659356321e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 3.896516326142409e-07
+          "value": 3.9659674973307113e-07
         }
       }
     ],
@@ -6210,12 +7810,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 17.823042876955775
+          "value": 16.97854128949391
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 1469.5789046229086
+          "value": 372.9005861965452
         }
       }
     ],
@@ -6272,12 +7872,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0003640580334015862
+          "value": 0.0003392842177855481
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.915116213894569
+          "value": 0.9608752203465973
         }
       }
     ],
@@ -6334,12 +7934,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 314.50193479366413
+          "value": 236.2796130649837
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 73979.16640902148
+          "value": 76764.48550538084
         }
       }
     ],
@@ -6396,12 +7996,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 213.08781912686655
+          "value": 323.79017648827283
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 67690.22103503393
+          "value": 72943.52744888596
         }
       }
     ],
@@ -6458,12 +8058,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 223.4517264225755
+          "value": 251.19013499679818
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 46831.54430409335
+          "value": 52737.65253094008
         }
       }
     ],
@@ -6520,12 +8120,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0002517598330416261
+          "value": 0.0003146935555220452
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.1509916105252513
+          "value": 1.1454157858942333
         }
       },
       {
@@ -6580,12 +8180,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 1.4231951155200178
+          "value": 1.3902452621234982
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 12.903676363025316
+          "value": 6.822092492376778
         }
       }
     ],
@@ -6660,12 +8260,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.809792670332635e-08
+          "value": 1.6574378107494898e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -1.0065585062633288e-07
+          "value": 4.451596020871345e-07
         }
       },
       {
@@ -6738,12 +8338,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 15.485999096124749
+          "value": 17.83008697063229
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 1734.5117295353193
+          "value": 1093.8240961134252
         }
       }
     ],
@@ -6818,12 +8418,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 16.874440277646176
+          "value": 17.851676717498968
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 1950.5531368809097
+          "value": 1185.5575534386517
         }
       }
     ],
@@ -6898,12 +8498,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.7685355608747505e-08
+          "value": 1.5869409671694417e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.842258462122256e-07
+          "value": 4.4254771838618274e-07
         }
       }
     ],
@@ -6960,12 +8560,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00044686430424298307
+          "value": 0.000310886079342609
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8899545719361828
+          "value": 0.816538378776048
         }
       },
       {
@@ -7020,12 +8620,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.5438962136770839
+          "value": 0.1972789068169957
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 3.719267604294728
+          "value": 1.5409075335240208
         }
       }
     ],
@@ -7082,12 +8682,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.000290653901903899
+          "value": 0.0004352084326630596
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9694943407712623
+          "value": 0.9656382585603512
         }
       },
       {
@@ -7142,12 +8742,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.7736934900880361
+          "value": 1.4487074520462082
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 10.725118571570931
+          "value": 8.838842976957089
         }
       }
     ],
@@ -7204,12 +8804,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0003561891929385916
+          "value": 0.0002472337287491216
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8468226364527978
+          "value": 0.8141069076752047
         }
       },
       {
@@ -7264,12 +8864,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 1.2817633497369956
+          "value": 0.4848496255125598
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 8.83796971880669
+          "value": 4.159088693873466
         }
       }
     ],
@@ -7326,12 +8926,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00039841657946674267
+          "value": 0.00017810530558044454
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.851633190929131
+          "value": 0.7995650326243784
         }
       },
       {
@@ -7386,12 +8986,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.5481033930826731
+          "value": 0.9709161900508948
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 3.5817262810741943
+          "value": 10.211386816764978
         }
       }
     ],
@@ -7448,12 +9048,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0003393545798171928
+          "value": 0.00036713620636113614
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.7778825634610088
+          "value": 0.7907994418941237
         }
       }
     ],
@@ -7510,12 +9110,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0004114021851351363
+          "value": 0.0003128723297807311
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8118245077138039
+          "value": 0.7762025418018987
         }
       }
     ],
@@ -7590,12 +9190,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 16.736059413379685
+          "value": 15.520794308712137
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 58.68389948494587
+          "value": 301.7148977188699
         }
       }
     ],
@@ -7670,12 +9270,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.7777238169533824e-08
+          "value": 1.6930217671609945e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -6.914234677830535e-07
+          "value": -2.7621703599081855e-07
         }
       }
     ],
@@ -7750,12 +9350,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 16.732195969047392
+          "value": 16.41186893285876
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 82.64828189059699
+          "value": 263.9646504364314
         }
       }
     ],
@@ -7830,12 +9430,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.6851893572457308e-08
+          "value": 1.6010455405213096e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -7.493202559424411e-07
+          "value": -2.1435227031358164e-07
         }
       }
     ],
@@ -7892,12 +9492,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00044107281489872167
+          "value": 0.0003070400112778522
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8042123629784297
+          "value": 0.7818505669020851
         }
       }
     ],
@@ -7972,12 +9572,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 15.157916731597647
+          "value": 15.964916312316475
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 36.602586909782985
+          "value": -35.28822580258566
         }
       }
     ],
@@ -8034,12 +9634,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00031338798054902467
+          "value": 0.00024440887658128574
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8991215091493473
+          "value": 0.9139895338652055
         }
       }
     ],
@@ -8096,12 +9696,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0003311510354732528
+          "value": 0.00022520177096422198
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8692319904894346
+          "value": 0.8291910893313711
         }
       },
       {
@@ -8156,12 +9756,132 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.07056338222039918
+          "value": 0.25113383086981667
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 1.4253131015020124
+          "value": 2.2740627474069735
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.density.Density",
+        "gradients": [],
+        "id": "d5647da3-a140-4311-9caa-42cced8e5dfa",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "CCCCCCCCO": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "CCCCCCCCO",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "CCCCCCCCO"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 100.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 0.0002460199528314535
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "gram / milliliter",
+          "value": 0.8289959043151738
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.dielectric.DielectricConstant",
+        "gradients": [],
+        "id": "64d90d66-28ce-438d-9759-126dbd73c906",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "CCCCCCCCO": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "CCCCCCCCO",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "CCCCCCCCO"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 100.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "dimensionless",
+          "value": 0.16597446898156354
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "dimensionless",
+          "value": 1.7480112290026244
         }
       }
     ],
@@ -8218,12 +9938,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00027039616779652874
+          "value": 0.0002521581310747304
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8630314913685714
+          "value": 0.8237933066542195
         }
       },
       {
@@ -8278,12 +9998,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.1407859230414941
+          "value": 0.05538035355749164
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 1.829137927768015
+          "value": 1.4137140228958958
         }
       }
     ],
@@ -8358,12 +10078,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.889280833782972e-08
+          "value": 1.8025503060211158e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.900335047739436e-08
+          "value": 5.015942026259738e-07
         }
       }
     ],
@@ -8438,12 +10158,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 17.205103449739042
+          "value": 18.890376014015295
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 293.68838149955263
+          "value": 288.5414553001756
         }
       }
     ],
@@ -8518,12 +10238,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.7268969463203852e-08
+          "value": 1.697554780303715e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -6.480358761705354e-08
+          "value": 3.5039137287319155e-07
         }
       }
     ],
@@ -8598,12 +10318,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 18.712037418328844
+          "value": 18.27789056664403
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 193.70129748163163
+          "value": 202.77303693414433
         }
       }
     ],
@@ -8660,12 +10380,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00038874095603002847
+          "value": 0.0002683084289808657
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8909425880497356
+          "value": 0.8632668027351061
         }
       }
     ],
@@ -8722,12 +10442,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00032060176851175174
+          "value": 0.00023141716371913147
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8553200842658415
+          "value": 0.8195204514410008
         }
       },
       {
@@ -8782,12 +10502,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.603509403175715
+          "value": 0.2411060416711358
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 4.657133705868853
+          "value": 1.8132652354794088
         }
       }
     ],
@@ -8844,12 +10564,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0003132912878670102
+          "value": 0.00017955845748204237
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8469119299738935
+          "value": 0.8125616951400665
         }
       },
       {
@@ -8904,12 +10624,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.09235322990046503
+          "value": 1.1950130033239112
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 1.6386611545510108
+          "value": 7.746037390991251
         }
       }
     ],
@@ -8966,12 +10686,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00038879885113199647
+          "value": 0.0002527031159219868
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9096400546412724
+          "value": 0.8979506161314162
         }
       }
     ],
@@ -9028,12 +10748,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00037563896975313773
+          "value": 0.00026590716551396567
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9089836234482135
+          "value": 0.9262723331878399
         }
       }
     ],
@@ -9090,12 +10810,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00038017821344541564
+          "value": 0.00025512732143472916
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8355382508977873
+          "value": 0.807037066290589
         }
       },
       {
@@ -9150,12 +10870,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.3943719879981859
+          "value": 0.21010026337525026
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 2.7545326233334135
+          "value": 2.0852076217146114
         }
       }
     ],
@@ -9230,12 +10950,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 15.7888740862834
+          "value": 15.402183096006759
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -2.0981634893178125
+          "value": -5.231756938526814
         }
       }
     ],
@@ -9292,12 +11012,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0003287474257147534
+          "value": 0.00028474273265655624
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9135303556431713
+          "value": 0.9077382212724813
         }
       }
     ],
@@ -9354,12 +11074,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00027748078541861825
+          "value": 0.0002262096422863246
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.909355350902214
+          "value": 0.9271642630630988
         }
       },
       {
@@ -9414,12 +11134,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.6820176788655471
+          "value": 0.9314103192417301
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 5.989988778386349
+          "value": 6.794277905007855
         }
       }
     ],
@@ -9476,12 +11196,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0004229070684812488
+          "value": 0.00024051997378748727
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8224853496773205
+          "value": 0.7977648825676116
         }
       },
       {
@@ -9536,12 +11256,134 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.47057001484774336
+          "value": 1.0063009188064411
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 2.6104351753396617
+          "value": 8.159630595476468
+        }
+      }
+    ],
+    "CCOC(=O)/C=C(/C)\\O{1.000000}": [
+      {
+        "@type": "propertyestimator.properties.enthalpy.EnthalpyOfVaporization",
+        "gradients": [],
+        "id": "dae84f78-056e-4861-ac03-5a76aa27e234",
+        "metadata": {},
+        "phase": 6,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "CCOC(=O)/C=C(/C)\\O": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "CCOC(=O)/C=C(/C)\\O",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "CCOC(=O)/C=C(/C)\\O"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "atmosphere",
+            "value": 1.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 215.54625431259257
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 58333.034344091524
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.enthalpy.EnthalpyOfVaporization",
+        "gradients": [],
+        "id": "dae84f78-056e-4861-ac03-5a76aa27e234",
+        "metadata": {},
+        "phase": 6,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "CCOC(=O)/C=C(/C)\\O": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "CCOC(=O)/C=C(/C)\\O",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "CCOC(=O)/C=C(/C)\\O"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "atmosphere",
+            "value": 1.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 214.27851845539098
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 58522.97227777058
         }
       }
     ],
@@ -9598,12 +11440,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 298.06389705132256
+          "value": 265.52357825413037
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 59467.96505324328
+          "value": 66968.03277103594
         }
       }
     ],
@@ -9660,12 +11502,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 306.10857992126546
+          "value": 303.5983188202124
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 61974.94876571041
+          "value": 68037.80209360839
         }
       }
     ],
@@ -9722,12 +11564,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00034232931283989114
+          "value": 0.00029375972753560163
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8047900847188786
+          "value": 0.7864107995923835
         }
       },
       {
@@ -9782,12 +11624,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 1.4076096493080785
+          "value": 0.7744605937318374
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 13.701896713484617
+          "value": 10.788825367257013
         }
       }
     ],
@@ -9844,12 +11686,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 270.1656277715352
+          "value": 282.571475192735
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 52397.69740024757
+          "value": 60594.88696925314
         }
       }
     ],
@@ -9906,12 +11748,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00012990424516230424
+          "value": 0.00017813059630241874
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8603975782863723
+          "value": 0.975097215645272
         }
       },
       {
@@ -9966,12 +11808,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 1.3979720500022061
+          "value": 1.4392472102495637
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 21.55249873683476
+          "value": 23.750734134020536
         }
       }
     ],
@@ -10028,12 +11870,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00025579022373855664
+          "value": 0.00026804580143574206
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8487497336762153
+          "value": 0.934444225124334
         }
       },
       {
@@ -10088,12 +11930,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.7868566448071205
+          "value": 0.8830989908574048
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 4.997181025306759
+          "value": 5.486656606560816
         }
       }
     ],
@@ -10150,12 +11992,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00022493895101179974
+          "value": 0.00035730916371515167
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9748173801814116
+          "value": 1.0703683382891571
         }
       },
       {
@@ -10210,12 +12052,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 0.291031700275583
+          "value": 0.36457011404471257
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 2.400418471503005
+          "value": 2.0796475034750452
         }
       }
     ],
@@ -10290,12 +12132,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 14.310668743112183
+          "value": 15.012003234851099
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -0.10769096399963018
+          "value": -109.67575216526893
         }
       }
     ],
@@ -10370,12 +12212,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.7510459193105906e-08
+          "value": 1.3984277592211738e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.0685458588171692e-07
+          "value": -5.819858315849648e-07
         }
       }
     ],
@@ -10450,12 +12292,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.6922839940092967e-08
+          "value": 1.477249125646903e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 7.355712452215889e-08
+          "value": -4.135826334822427e-07
         }
       }
     ],
@@ -10512,12 +12354,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0003076663680229943
+          "value": 0.00027215857689994756
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8457890662075384
+          "value": 0.8636054744154075
         }
       }
     ],
@@ -10574,12 +12416,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00036484248457152146
+          "value": 0.0004289293592890103
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9136032711267332
+          "value": 1.0453894488415167
         }
       }
     ],
@@ -10636,12 +12478,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 201.4414364236944
+          "value": 308.9410692852256
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 76223.29707545752
+          "value": 75341.81129648071
         }
       }
     ],
@@ -10698,12 +12540,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 326.93210160137505
+          "value": 308.8563654305152
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 75270.05533968826
+          "value": 79252.84273318422
         }
       }
     ],
@@ -10760,12 +12602,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 259.5623029523645
+          "value": 188.15833159491166
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 54130.428514469146
+          "value": 53327.121272191915
         }
       }
     ],
@@ -10822,12 +12664,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 269.71915230305365
+          "value": 269.67252494102945
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 58710.92239907522
+          "value": 60245.53392219345
         }
       }
     ],
@@ -10902,12 +12744,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 15.764694852035364
+          "value": 16.281846831145085
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 345.8715424763086
+          "value": -266.9694112565048
         }
       }
     ],
@@ -10982,12 +12824,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.5550700307852558e-08
+          "value": 1.2462948849232899e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.4968246213772728e-07
+          "value": -8.846690441525448e-07
         }
       }
     ],
@@ -11062,12 +12904,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.458843056194747e-08
+          "value": 1.5460263643495455e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 9.598630433085603e-08
+          "value": -8.133675071660164e-07
         }
       }
     ],
@@ -11142,12 +12984,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 15.790390607267433
+          "value": 15.672231819782894
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 207.27319395176528
+          "value": -102.38183964142218
         }
       }
     ],
@@ -11204,12 +13046,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0002794150357877843
+          "value": 0.00043103397319532776
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.7430287981278743
+          "value": 0.781397202459998
         }
       },
       {
@@ -11264,12 +13106,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 1.15532938030301
+          "value": 1.0065327082960163
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 17.04103726660927
+          "value": 19.114149258915457
         }
       }
     ],
@@ -11326,12 +13168,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00010561514029452606
+          "value": 0.0001095026668580772
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9470991764029039
+          "value": 1.0864777708930828
         }
       },
       {
@@ -11386,12 +13228,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 1.2726957379595323
+          "value": 1.4892367416832017
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "dimensionless",
-          "value": 42.169558431609225
+          "value": 51.68926184967958
         }
       }
     ],
@@ -11448,12 +13290,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00044365525496643983
+          "value": 0.0003357461845555315
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9555076928726667
+          "value": 0.9986210740649372
         }
       }
     ],
@@ -11510,12 +13352,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 263.25341523305303
+          "value": 291.8380359170505
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 57132.99716388615
+          "value": 64362.39457383508
         }
       }
     ],
@@ -11572,12 +13414,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 241.66324879584963
+          "value": 245.57921178388818
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 49521.88560031006
+          "value": 57418.53724447813
         }
       }
     ],
@@ -11652,12 +13494,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 14.5002201243105
+          "value": 14.23786463803573
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 34.805608005470276
+          "value": -82.44607773429016
         }
       }
     ],
@@ -11714,12 +13556,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0002796140515836
+          "value": 0.0002890609539547826
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9666427437668359
+          "value": 0.9229153220772184
         }
       }
     ],
@@ -11794,12 +13636,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.652905668299727e-08
+          "value": 1.8081730406976375e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -1.547110785270054e-07
+          "value": -2.992753639953911e-07
         }
       }
     ],
@@ -11874,12 +13716,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.7423017736617907e-08
+          "value": 1.7205521076422957e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -5.162381966246083e-08
+          "value": -3.295659420310621e-07
         }
       }
     ],
@@ -11954,12 +13796,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 18.71986421635934
+          "value": 17.453943515105998
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -631.7398582939932
+          "value": -1387.3153692884662
         }
       }
     ],
@@ -12034,12 +13876,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 17.72497569678277
+          "value": 18.790772633824385
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -487.05175340618007
+          "value": -1302.1084761614038
         }
       }
     ],
@@ -12114,12 +13956,90 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.777922600157739e-08
+          "value": 1.7417895417833316e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -1.6450019014655187e-08
+          "value": -1.8757624952966435e-07
+        }
+      },
+      {
+        "@type": "propertyestimator.properties.density.ExcessMolarVolume",
+        "gradients": [],
+        "id": "eba5fecd-d932-4ff8-a795-7b86229f8f56",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "Cc1ccccc1N": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.7674
+                }
+              ]
+            },
+            "Cc1ccncc1": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.2326000000000001
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "Cc1ccccc1N",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "Cc1ccccc1N"
+            },
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "Cc1ccncc1",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "Cc1ccncc1"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 298.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "meter ** 3 / mole",
+          "value": 1.6314747572105623e-08
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "meter ** 3 / mole",
+          "value": -1.806926878296231e-07
         }
       }
     ],
@@ -12194,12 +14114,92 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": 1.6983599096543604e-08
+          "value": 1.6475691976673162e-08
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "meter ** 3 / mole",
-          "value": -9.939588860539961e-08
+          "value": -2.596026727408264e-07
+        }
+      }
+    ],
+    "Cc1ccccc1N{0.773500}|c1ccncc1{0.226500}": [
+      {
+        "@type": "propertyestimator.properties.enthalpy.EnthalpyOfMixing",
+        "gradients": [],
+        "id": "4c377489-a67e-463b-8ef9-ba613b5f7e43",
+        "metadata": {},
+        "phase": 2,
+        "source": {
+          "@type": "propertyestimator.properties.properties.CalculationSource",
+          "fidelity": "SimulationLayer",
+          "provenance": {}
+        },
+        "substance": {
+          "@type": "propertyestimator.substances.Substance",
+          "amounts": {
+            "Cc1ccccc1N": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.7735
+                }
+              ]
+            },
+            "c1ccncc1": {
+              "@type": "builtins.frozenset",
+              "value": [
+                {
+                  "@type": "propertyestimator.substances.Substance->MoleFraction",
+                  "value": 0.2265000000000001
+                }
+              ]
+            }
+          },
+          "components": [
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "Cc1ccccc1N",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "Cc1ccccc1N"
+            },
+            {
+              "@type": "propertyestimator.substances.Substance->Component",
+              "label": "c1ccncc1",
+              "role": {
+                "@type": "propertyestimator.substances.Substance->ComponentRole",
+                "value": "Solvent"
+              },
+              "smiles": "c1ccncc1"
+            }
+          ]
+        },
+        "thermodynamic_state": {
+          "@type": "propertyestimator.thermodynamics.ThermodynamicState",
+          "pressure": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kilopascal",
+            "value": 101.0
+          },
+          "temperature": {
+            "@type": "propertyestimator.unit.Quantity",
+            "unit": "kelvin",
+            "value": 308.15
+          }
+        },
+        "uncertainty": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": 16.827981158719393
+        },
+        "value": {
+          "@type": "propertyestimator.unit.Quantity",
+          "unit": "kilogram * meter ** 2 / mole / second ** 2",
+          "value": -1045.9625135776878
         }
       }
     ],
@@ -12274,12 +14274,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 16.938998909790964
+          "value": 17.27930269939165
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": -339.75745852460386
+          "value": -890.6922601853148
         }
       }
     ],
@@ -12336,12 +14336,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00037696520426864653
+          "value": 0.00030191674083500733
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.022968032349215
+          "value": 1.0171721210186369
         }
       }
     ],
@@ -12416,12 +14416,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 15.241340974114866
+          "value": 15.468967141145031
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 35.65758447452754
+          "value": -32.275331855264085
         }
       }
     ],
@@ -12478,12 +14478,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00033940469121340646
+          "value": 0.0003014018570851272
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9773053711611452
+          "value": 0.9443619207699508
         }
       }
     ],
@@ -12558,12 +14558,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 13.034779572652894
+          "value": 14.786082850865224
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 36.57706495441016
+          "value": -39.40993487525702
         }
       }
     ],
@@ -12620,12 +14620,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.000308894216340157
+          "value": 0.0002888150498631365
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9821368418483666
+          "value": 0.9474558710983529
         }
       }
     ],
@@ -12682,12 +14682,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 247.00415673077026
+          "value": 164.77541269194634
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 53907.50616466054
+          "value": 58707.681384671225
         }
       }
     ],
@@ -12744,12 +14744,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 275.44551899972333
+          "value": 290.5104970282817
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 56333.67243045409
+          "value": 62244.01153998983
         }
       }
     ],
@@ -12806,12 +14806,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 245.18289280272325
+          "value": 286.6165868567281
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 52684.113035550174
+          "value": 59935.743871041755
         }
       }
     ],
@@ -12868,12 +14868,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 309.4903363414911
+          "value": 320.49186048281587
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 72155.1084153903
+          "value": 70867.5482102551
         }
       }
     ],
@@ -12948,12 +14948,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 15.01242684114312
+          "value": 15.456289876620222
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 58.084431800883976
+          "value": -49.33442415667378
         }
       }
     ],
@@ -13010,12 +15010,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00023681450166019075
+          "value": 0.00028603242278681134
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.0070009829976583
+          "value": 1.0439406182474675
         }
       }
     ],
@@ -13090,12 +15090,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 16.20581832751953
+          "value": 16.268293258689784
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 712.6654581220646
+          "value": 137.56816287679248
         }
       }
     ],
@@ -13170,12 +15170,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 15.013202093023578
+          "value": 18.04932292737248
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 718.5568576481965
+          "value": -46.94995951512465
         }
       }
     ],
@@ -13232,12 +15232,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00040026328185756256
+          "value": 0.0003613085804484371
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.2939102651762924
+          "value": 1.2522033573161835
         }
       }
     ],
@@ -13294,12 +15294,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00039079103392091976
+          "value": 0.0003923407117378866
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.6293149304615036
+          "value": 1.5154698729069411
         }
       }
     ],
@@ -13356,12 +15356,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 249.4777430648031
+          "value": 245.4112784619491
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 39933.14989605209
+          "value": 38787.870917714004
         }
       }
     ],
@@ -13418,12 +15418,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0004299774720602882
+          "value": 0.000339744812201629
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.101953118332337
+          "value": 1.0720905976855233
         }
       }
     ],
@@ -13480,12 +15480,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 167.32320676384126
+          "value": 259.5646480051501
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 61318.41450623339
+          "value": 63936.10877888738
         }
       }
     ],
@@ -13542,12 +15542,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00036919867591950575
+          "value": 0.00036238785544520484
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9935880155128984
+          "value": 0.9872724336631634
         }
       }
     ],
@@ -13604,12 +15604,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.000310620175057947
+          "value": 0.0003480377368203161
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.6435198968813227
+          "value": 1.5305007036639884
         }
       }
     ],
@@ -13666,12 +15666,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 173.28499825028507
+          "value": 237.5426725726515
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 44452.28211398307
+          "value": 43358.27909257543
         }
       }
     ],
@@ -13728,12 +15728,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 224.34300855420295
+          "value": 170.881625926417
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 42120.461364816474
+          "value": 40902.486820767175
         }
       }
     ],
@@ -13790,12 +15790,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00032794528667599116
+          "value": 0.0003609501348395054
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.1562233287010302
+          "value": 1.1496071809453312
         }
       }
     ],
@@ -13852,12 +15852,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00033016687618898265
+          "value": 0.00037727400133237023
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.8709529017224956
+          "value": 0.857372318869893
         }
       },
       {
@@ -13912,12 +15912,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 222.1397117647989
+          "value": 157.73383646030103
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 35758.32422684605
+          "value": 31794.59008181445
         }
       }
     ],
@@ -13974,12 +15974,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00024350993258080836
+          "value": 0.00032708185656814905
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9848368980935445
+          "value": 0.9841451544981183
         }
       }
     ],
@@ -14036,12 +16036,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.0003520660433477924
+          "value": 0.0003249623076991186
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.9773629842058051
+          "value": 0.9543914454469098
         }
       }
     ],
@@ -14098,12 +16098,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 0.00038807280456733744
+          "value": 0.00033540710827512066
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "gram / milliliter",
-          "value": 1.4409586293007899
+          "value": 1.4568685676550837
         }
       }
     ],
@@ -14160,12 +16160,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 203.10165991696104
+          "value": 275.6640880576916
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 59680.149257763995
+          "value": 70376.35418887838
         }
       }
     ],
@@ -14222,12 +16222,12 @@
         "uncertainty": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 244.01138051623863
+          "value": 235.2291405351122
         },
         "value": {
           "@type": "propertyestimator.unit.Quantity",
           "unit": "kilogram * meter ** 2 / mole / second ** 2",
-          "value": 60517.72001541485
+          "value": 63985.997787542125
         }
       }
     ]
