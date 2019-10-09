@@ -74,6 +74,22 @@ matplotlib.rcParams['axes.prop_cycle'] = matplotlib.cycler(color=['b', 'r', 'g',
 
 
 def load_results(base_name, measured_data_set):
+    """Loads the results of estimating the curated data set against
+    one of the force fields of interest.
+
+    Parameters
+    ----------
+    base_name: str
+        The base name of the force field.
+    measured_data_set: PhysicalPropertyDataSet
+        The data set of experimentally measured properties.
+
+    Returns
+    -------
+    dict of str and list of tuple of PhysicalProperty and PhysicalProperty
+        A dictionary with keys of property types (e.g. Density) and values
+        of lists of tuples of the form (measured property, estimated property).
+    """
 
     # Load the results
     with open(os.path.join('raw_data', f'{base_name}.json'), 'r') as file:
@@ -96,6 +112,20 @@ def load_results(base_name, measured_data_set):
 
 
 def compute_statistic_unit(base_unit, statistics_type):
+    """Computes the correct unit for a given type of statistic.
+
+    Parameters
+    ----------
+    base_unit: unit.Unit
+        The original unit of the property.
+    statistics_type: Statistics
+        The type of statistic to get the unit for.
+
+    Returns
+    -------
+    unit.Unit
+        The unit the statistic should be given in.
+    """
     if statistics_type == Statistics.Slope:
         return None
     elif statistics_type == Statistics.Intercept:
@@ -168,7 +198,7 @@ def compute_statistics(measured_values, estimated_values):
     return summary_statistics, statistics_labels
 
 
-def compute_bootstrapped_statistics(property_tuples, percentile=0.95, bootstrap_samples=1000):
+def compute_bootstrapped_statistics(property_tuples, percentile=0.95, bootstrap_iterations=1000):
     """Compute the bootstrapped mean and confidence interval for a set
     of common error statistics.
 
@@ -176,6 +206,18 @@ def compute_bootstrapped_statistics(property_tuples, percentile=0.95, bootstrap_
     -----
     Bootstrapped samples are generated with replacement from the full
     original data set.
+
+    Parameters
+    ----------
+    property_tuples: list of tuple of PhysicalProperty and PhysicalProperty
+        A list of tuples, where each tuple contains the experimentally
+        measured value of a property, and the corresponding value which was
+        estimated using molecular simulation - i.e it has the form
+        (measure_property, estimated_property).
+    percentile: float
+        The percentile of the confidence interval to calculate.
+    bootstrap_iterations: int
+        The number of bootstrap iterations to perform.
     """
 
     sample_count = len(property_tuples)
@@ -202,9 +244,9 @@ def compute_bootstrapped_statistics(property_tuples, percentile=0.95, bootstrap_
     mean_statistics, statistics_labels = compute_statistics(measured_values, estimated_values)
 
     # Generate the bootstrapped statistics samples.
-    sample_statistics = np.zeros((bootstrap_samples, len(mean_statistics)))
+    sample_statistics = np.zeros((bootstrap_iterations, len(mean_statistics)))
 
-    for sample_index in range(bootstrap_samples):
+    for sample_index in range(bootstrap_iterations):
         samples_indices = np.random.randint(low=0, high=sample_count, size=sample_count)
 
         sample_measured_values = measured_values[samples_indices]
@@ -227,8 +269,8 @@ def compute_bootstrapped_statistics(property_tuples, percentile=0.95, bootstrap_
         standard_errors[statistic_label] = standard_errors_array[statistic_index]
 
     # Compute the confidence intervals.
-    lower_percentile_index = int(bootstrap_samples * (1 - percentile) / 2)
-    upper_percentile_index = int(bootstrap_samples * (1 + percentile) / 2)
+    lower_percentile_index = int(bootstrap_iterations * (1 - percentile) / 2)
+    upper_percentile_index = int(bootstrap_iterations * (1 + percentile) / 2)
 
     confidence_intervals = dict()
 
@@ -406,13 +448,22 @@ def plot_estimated_vs_experiment(properties_by_type, results_paths, figure_size=
                 estimated_uncertainties.append(estimated_property.uncertainty.to(preferred_unit).magnitude)
 
             means, _, ci = compute_bootstrapped_statistics(properties_by_type[property_type][results_name],
-                                                           bootstrap_samples=1000)
+                                                           bootstrap_iterations=1000)
 
             axis = axes[column_index]
             axis.locator_params(nbins=5)
 
-            axis.text(0.03, 0.90, f'$R^2 = {means[Statistics.R2]:.2f}_{{{ci[Statistics.R2][0]:.2f}}}^{{{ci[Statistics.R2][1]:.2f}}}$', transform=axis.transAxes)
-            axis.text(0.03, 0.75, f'$RMSE = {means[Statistics.RMSE]:.2f}_{{{ci[Statistics.RMSE][0]:.2f}}}^{{{ci[Statistics.RMSE][1]:.2f}}}$', transform=axis.transAxes)
+            axis.text(
+                0.03,
+                0.90,
+                f'$R^2 = {means[Statistics.R2]:.2f}_{{{ci[Statistics.R2][0]:.2f}}}^{{{ci[Statistics.R2][1]:.2f}}}$',
+                transform=axis.transAxes)
+            axis.text(
+                0.03,
+                0.75,
+                f'$RMSE = {means[Statistics.RMSE]:.2f}_{{{ci[Statistics.RMSE][0]:.2f}}}^'
+                f'{{{ci[Statistics.RMSE][1]:.2f}}}$',
+                transform=axis.transAxes)
 
             axis.errorbar(x=estimated_values,
                           y=measured_values,
