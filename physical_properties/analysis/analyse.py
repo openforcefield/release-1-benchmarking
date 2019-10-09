@@ -29,11 +29,11 @@ preferred_units = {
 
 
 axis_bounds = {
-    'Density': (500.0, 3500.0),
-    'DielectricConstant': (0.0, 50.0),
-    'EnthalpyOfVaporization': (20, 100.0),
-    'EnthalpyOfMixing': (-4.0, 4.0),
-    'ExcessMolarVolume': (-1.0, 1.0)
+    'Density': (500.0, 4500.0),
+    'DielectricConstant': (0.0, 70.0),
+    'EnthalpyOfVaporization': (20, 120.0),
+    'EnthalpyOfMixing': (-5.0, 5.0),
+    'ExcessMolarVolume': (-2.0, 2.0)
 }
 
 
@@ -405,13 +405,14 @@ def plot_estimated_vs_experiment(properties_by_type, results_paths, figure_size=
                 estimated_values.append(estimated_property.value.to(preferred_unit).magnitude)
                 estimated_uncertainties.append(estimated_property.uncertainty.to(preferred_unit).magnitude)
 
-            means, _, _ = compute_bootstrapped_statistics(properties_by_type[property_type][results_name],
-                                                          bootstrap_samples=1)
+            means, _, ci = compute_bootstrapped_statistics(properties_by_type[property_type][results_name],
+                                                           bootstrap_samples=1000)
 
             axis = axes[column_index]
             axis.locator_params(nbins=5)
 
-            axis.text(0.03, 0.90, f'$R^2$ = {means[Statistics.R2]:.4f}', transform=axis.transAxes)
+            axis.text(0.03, 0.90, f'$R^2 = {means[Statistics.R2]:.2f}_{{{ci[Statistics.R2][0]:.2f}}}^{{{ci[Statistics.R2][1]:.2f}}}$', transform=axis.transAxes)
+            axis.text(0.03, 0.75, f'$RMSE = {means[Statistics.RMSE]:.2f}_{{{ci[Statistics.RMSE][0]:.2f}}}^{{{ci[Statistics.RMSE][1]:.2f}}}$', transform=axis.transAxes)
 
             axis.errorbar(x=estimated_values,
                           y=measured_values,
@@ -431,10 +432,12 @@ def plot_estimated_vs_experiment(properties_by_type, results_paths, figure_size=
             else:
                 axis.ticklabel_format(style='plain', axis='both')
 
-            axis.grid(axis='both', linestyle='--', lw=1.0, color='black', alpha=0.2)
             axis.set_aspect('equal')
 
         pyplot.savefig(os.path.join('plots', f'{property_type}.pdf'),
+                       bbox_inches='tight')
+
+        pyplot.savefig(os.path.join('plots', f'{property_type}.png'),
                        bbox_inches='tight')
 
 
@@ -701,8 +704,8 @@ def main():
     with open(os.path.join('raw_data', 'curated_data_set.json'), 'r') as file:
         measured_data_set = json.load(file, cls=TypedJSONDecoder)
 
-    results_paths = ['smirnoff99frosst 1.1.0', 'parsley 0.0.9', 'parsley rc 1', 'gaff 1.81', 'gaff 2.11']
-    smirnoff_results_paths = ['smirnoff99frosst 1.1.0', 'parsley 0.0.9', 'parsley rc 1']
+    results_paths = ['smirnoff99frosst 1.1.0', 'parsley rc 1', 'parsley v1.0.0', 'gaff 1.81', 'gaff 2.11']
+    smirnoff_results_paths = ['smirnoff99frosst 1.1.0', 'parsley rc 1', 'parsley v1.0.0']
 
     all_results_by_type = defaultdict(lambda: defaultdict(list))
 
