@@ -1,10 +1,12 @@
 import json
+import logging
 import os
 import shutil
+from time import sleep
 
 from propertyestimator import unit
 from propertyestimator.backends import QueueWorkerResources, DaskLSFBackend
-from propertyestimator.client import PropertyEstimatorOptions, PropertyEstimatorClient
+from propertyestimator.client import PropertyEstimatorOptions, PropertyEstimatorClient, PropertyEstimatorResult
 from propertyestimator.datasets import PhysicalPropertyDataSet
 from propertyestimator.forcefield import SmirnoffForceFieldSource, TLeapForceFieldSource
 from propertyestimator.server import PropertyEstimatorServer
@@ -98,26 +100,11 @@ def setup_server(max_number_of_workers=1, conda_environment='propertyestimator',
 
     # Set up extra commands so that each worker has the correct environment
     # set up.
-    home_directory = os.path.expanduser("~")
-
-    open_eye_license_path = os.path.join(home_directory, 'oe_license.txt')
-    mini_conda_source_path = os.path.join(home_directory, 'miniconda3', 'etc', 'profile.d', 'conda.sh')
-
     worker_script_commands = [
-        # Export the path to the OE license.
-        f'export OE_LICENSE="{open_eye_license_path}"',
-        # Source the miniconda installation.
-        f'. {mini_conda_source_path}',
         # Load in the correct conda environment.
         f'conda activate {conda_environment}',
         # Load in CUDA
         f'module load cuda/9.2'
-    ]
-
-    # Set any extra cluster specific #BSUB options. These are
-    # the defaults used for the MSKCC lilac cluster.
-    extra_script_options = [
-        '-m "ls-gpu lt-gpu"'
     ]
 
     calculation_backend = DaskLSFBackend(minimum_number_of_workers=1,
@@ -125,7 +112,6 @@ def setup_server(max_number_of_workers=1, conda_environment='propertyestimator',
                                          resources_per_worker=queue_resources,
                                          queue_name='gpuqueue',
                                          setup_script_commands=worker_script_commands,
-                                         extra_script_options=extra_script_options,
                                          adaptive_interval='1000ms')
 
     # Set up a backend to cache simulation data in.
@@ -209,6 +195,7 @@ def main():
     """
 
     setup_timestamp_logging()
+    logger = logging.getLogger()
 
     # Define those force fields to use in the calculations
     force_field_sources = {
@@ -220,7 +207,7 @@ def main():
     }
 
     # Set up the server object which will run the calculations.
-    setup_server(max_number_of_workers=40)
+    setup_server(max_number_of_workers=50)
 
     # Set up the client which will request the estimates.
     estimator_client = PropertyEstimatorClient()
@@ -250,12 +237,31 @@ def main():
                                                                       options=options)
 
     # Wait for the results.
-    for force_field_key in force_field_sources:
+    should_run = True
+    finished_force_fields = []
 
-        results = requests[force_field_key].results(True, 60)
+    while should_run:
 
-        # Save the result to file.
-        save_results(force_field_key, results)
+        sleep(60)
+
+        for force_field_key in force_field_sources:
+
+            if force_field_key in finished_force_fields:
+                continue
+
+            results = requests[force_field_key].results(False)
+
+            if isinstance(results, PropertyEstimatorResult) and len(results.queued_properties) > 0:
+                continue
+
+            logger.info(f'The server has completed {force_field_key}.')
+
+            # Save the result to file.
+            save_results(force_field_key, results)
+            finished_force_fields.append(force_field_key)
+
+        if len(finished_force_fields) == len(force_field_sources):
+            should_run = False
 
 
 if __name__ == "__main__":
