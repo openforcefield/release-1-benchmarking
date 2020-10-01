@@ -13,7 +13,10 @@ from openff.evaluator.datasets import PhysicalPropertyDataSet
 
 seaborn.set_context("paper", font_scale=2.2)
 
-pyplot.rc('text', usetex=True)
+try:
+    pyplot.rc('text', usetex=True)
+except:
+    pass
 pyplot.rcParams["mathtext.fontset"] = "cm"
 
 # Define properties whose density values don't seem to be correct. In particular,
@@ -24,6 +27,7 @@ OUTLIERS = [
     "acd8823e-a58f-4290-ad98-9901e1f1ffce",
 ]
 
+# Define templates for LATEX output
 PROPERTY_TYPE_TO_TITLE = {
     "Density_1": fr"$\rho \left({properties.Density.default_unit():P~}\right)$",
     "Density_2": (
